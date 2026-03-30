@@ -32,30 +32,34 @@ El objetivo es transmitir no solo imágenes, sino **concepto, identidad y narrat
 ---
 
 ## 📁 Estructura del proyecto
+
+```plaintext
 /javier_revelo
 │
-├── index.html
+├── index.html                # Página principal
+│
 ├── /css
-│    └── style.css
+│   └── style.css            # Estilos globales
 │
 ├── /js
-│    ├── index.js
-│    └── /componentes
-│        ├── detalleObra.js
-│        ├── detalleProducto.js
-│        ├── footer.js
-│        ├── galeriaArtista.js
-│        ├── header.js
-│        └── heroSection.js
+│   ├── index.js             # Lógica principal
+│   │
+│   └── /componentes         # Web Components reutilizables
+│       ├── header.js
+│       ├── footer.js
+│       ├── heroSection.js
+│       ├── galeriaArtista.js
+│       ├── detalleObra.js
+│       └── detalleProducto.js
 │
-├── /plantillas
+├── /plantillas              # Vistas HTML reutilizables
 │   ├── contacto.html
 │   ├── sobre_mi.html
 │   ├── tienda.html
 │   └── trabajos.html
 │
 └── /assets
-    └── images/
+    └── /images              # Imágenes de obras y recursos visuales
 
 ## 🚀 Instalación y uso
 Clona este repositorio:
