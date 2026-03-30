@@ -60,6 +60,7 @@ El objetivo es transmitir no solo imágenes, sino **concepto, identidad y narrat
 │
 └── /assets
     └── /images              # Imágenes de obras y recursos visuales
+```
 
 ## 🚀 Instalación y uso
 Clona este repositorio:
