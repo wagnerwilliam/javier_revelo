@@ -36,15 +36,15 @@ El objetivo es transmitir no solo imágenes, sino **concepto, identidad y narrat
 ```plaintext
 /javier_revelo
 │
-├── index.html                # Página principal
+├── index.html                
 │
 ├── /css
-│   └── style.css            # Estilos globales
+│   └── style.css
 │
 ├── /js
-│   ├── index.js             # Lógica principal
+│   ├── index.js
 │   │
-│   └── /componentes         # Web Components reutilizables
+│   └── /componentes
 │       ├── header.js
 │       ├── footer.js
 │       ├── heroSection.js
@@ -52,14 +52,14 @@ El objetivo es transmitir no solo imágenes, sino **concepto, identidad y narrat
 │       ├── detalleObra.js
 │       └── detalleProducto.js
 │
-├── /plantillas              # Vistas HTML reutilizables
+├── /plantillas  
 │   ├── contacto.html
 │   ├── sobre_mi.html
 │   ├── tienda.html
 │   └── trabajos.html
 │
 └── /assets
-    └── /images              # Imágenes de obras y recursos visuales
+    └── /images
 ```
 
 ## 🚀 Instalación y uso
