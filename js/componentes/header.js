@@ -40,7 +40,7 @@ class Header extends HTMLElement {
     const isInTemplates = currentPath.includes("/plantillas/");
 
     // Ajusta la base de rutas
-    const base = isInTemplates ? "../" : "./";
+    const base = isInTemplates ? "./" : "";
     this.innerHTML = `
       <header class="header header__${theme}">
           <h1>Javier Revelo</h1>
