@@ -57,7 +57,7 @@
 
 /* Overlay oculto inicialmente */
 .overlay {
-    font: 400 1.5rem var(--marcellus-font);
+    font: 400 1.3rem var(--marcellus-font);
     position: absolute;
     top: 0;
     left: 0;
@@ -69,12 +69,20 @@
     justify-content: center;
     align-items: center;
 
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     color: white;
 
     opacity: 0;
     transition: opacity 0.3s ease;
+
+    & h3 {
+        text-align: center;
+    }
+
+    & p {
+        font: 400 1rem var(--marcellus-font);
+    }
 }
 
 .image-container:hover .overlay {
