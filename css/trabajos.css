@@ -1,0 +1,36 @@
+@import "hero.css";
+
+
+.filters {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+
+    & button {
+        font: 400 1rem var(--marcellus-font);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--color-text);
+    }
+}
+
+
+.trabajos__block {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.trabajos__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);    
+    gap: 3rem;
+
+    & div img{
+        height: 550px;
+        width: 400px;
+        border-radius: 10px;
+    }
+}

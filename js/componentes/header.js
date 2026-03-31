@@ -24,7 +24,8 @@ class Header extends HTMLElement {
    */
   connectedCallback() {
     const subTitle = this.getAttribute("sub-title");
-    this.render(subTitle)
+    const theme = this.getAttribute("theme")
+    this.render(subTitle, theme)
   }
 
   /**
@@ -32,10 +33,10 @@ class Header extends HTMLElement {
    * @param {string|null} subTitle - Texto opcional para el subtítulo
    * @returns {void}
    */
-  render(subTitle) {
+  render(subTitle, theme) {
     let currentPath = window.location.pathname;
     this.innerHTML = `
-      <header class="header">
+      <header class="header header__${theme}">
           <h1>Javier Revelo</h1>
           ${subTitle ? `<h2>${subTitle}</h2>` : ""}
           <nav class="header__menu">
@@ -43,7 +44,7 @@ class Header extends HTMLElement {
                   ${this.navItems.map((item) => `
                       <li>
                         <a href="${item.href}" 
-                        class="${currentPath === item.href ? 'agregar clase para indicar cuando se este en la pgina activo' : ''}"
+                        class="${currentPath === item.href ? 'active' : ''}"
                         >${item.name}</a>
                       </li>
                   `).join("")}

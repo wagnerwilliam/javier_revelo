@@ -5,19 +5,29 @@
     margin: 0 auto;
     flex-flow: column wrap;
     align-items: center;
-    gap: 1.5rem;    
-    border: 1px solid red;
+    gap: 1.5rem;
+}
+
+.header__light {
+    color: var(--light);
 
     & h1 {
         font: 400 5rem var(--spectral-font);
-        color: var(--white);
         line-height: 1.1;
     }
 
     & h2 {
         font: 400 1.8rem var(--spectral-font);
-        color: var(--white);
         line-height: 1.3;       
+    }
+}
+
+.header__dark {
+    color: var(--dark);
+    
+    & h1 {
+        font: 400 5rem var(--spectral-font);
+        line-height: 1.1;
     }
 
 }
@@ -27,4 +37,35 @@
     flex-flow: row wrap;
     gap: 2rem;
     list-style: none;
+
+    & li a {
+        font-family: var(--spectral-font);
+        font-size: 1rem;
+        text-transform: uppercase;
+
+    }
+}
+
+.header__menu a {
+  position: relative;
+  display: inline-block;
+}
+
+.header__menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.4s ease;
+}
+
+.header__menu a:hover::after {
+  width: 100%;
+}
+
+.header__menu a.active::after {
+  width: 100%;
 }

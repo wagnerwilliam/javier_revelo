@@ -1,0 +1,26 @@
+@import "header.css";
+@keyframes heroMove {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
+}
+.hero {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    background-image: url(../assets/images/hero/hero.jpg);
+    background-size: cover;
+    background-position: center;
+
+    animation: heroMove 40s ease-in-out infinite alternate;
+
+    & h1 {
+        color: white;
+        font: 400 3.25rem var(--marcellus-font)
+    }
+}

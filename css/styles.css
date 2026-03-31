@@ -9,7 +9,10 @@
 :root {
     /* Variables globales */
     --spectral-font: "Spectral", serif;
-    --white: #FFFFFF;
+    --marcellus-font: "Marcellus", serif;
+    --light: #FFFFFF;
+    --dark: #000000;
+    --color-text: #555555;
 }
 
 img {
@@ -20,8 +23,9 @@ img {
 a {
     text-decoration: none;
     color: inherit;
-    font-family: var(--spectral-font);
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: var(--white);
+}
+
+.section {
+    padding: clamp(1rem, 5vw, 2rem) 1rem;
+    margin: 0 auto;
 }
