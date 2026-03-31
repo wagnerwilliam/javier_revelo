@@ -10,9 +10,33 @@ class Trabajos extends HTMLElement {
         ];
 
         this.storeImg = [
-            { name: "Ecos del Bosque | Óleo sobre lienzo", url: `${this.BASE_URL}assets/images/galeria/ecos_del_bosque.webp`, category: "fisico", price: "178,00 165,00 € IVA incl" },
-            { name: "El Último Testigo | Óleo sobre lienzo", url: `${this.BASE_URL}assets/images/galeria/leon.webp`, category: "fisico", price: "178,00 165,00 € IVA incl" },
-            { name: "Entre Piedra y Eternidad | Óleo sobre lienzo", url: `${this.BASE_URL}assets/images/galeria/cielo.webp`, category: "fisico", price: "178,00 165,00 € IVA incl" },
+            {
+                name: "Ecos del Bosque",
+                description: "Óleo sobre lienzo",
+                url: `${this.BASE_URL}assets/images/galeria/ecos_del_bosque.webp`,
+                category: "fisico",
+                price: 165,
+                oldPrice: 178,
+                currency: "€"
+            },
+            {
+                name: "El Último Testigo",
+                description: "Óleo sobre lienzo",
+                url: `${this.BASE_URL}assets/images/galeria/leon.webp`,
+                category: "fisico",
+                price: 156,
+                oldPrice: 165,
+                currency: "€"
+            },
+            {
+                name: "Entre Piedra y Eternidad",
+                description: "Óleo sobre lienzo",
+                url: `${this.BASE_URL}assets/images/galeria/cielo.webp`,
+                category: "fisico",
+                price: 165,
+                oldPrice: 178,
+                currency: "€"
+            },
         ];
     }
     getBaseUrl() {
@@ -35,15 +59,25 @@ class Trabajos extends HTMLElement {
         const data = this.getData(viewType);
         this.innerHTML = `
       <div class="trabajos__cards gallery">
-        ${data.map((objImg) =>
-            `
+        ${data.map((objImg) => `
           <div class="item" data-category="${objImg.category}">
               <div class="image-container">
                   <img src="${objImg.url}" alt="${objImg.name}">
                   <div class="overlay">
                       <h3>${objImg.name}</h3>
-                      ${objImg.price ? `<p>${objImg.price}</p>`: ""}
-                      <a href="#">- Ver -</a>
+                        ${
+                            viewType === "tienda"
+                            ? `
+                                <p class="price">
+                                    <span class="old-price">${objImg.oldPrice} ${objImg.currency}</span>
+                                    <span class="new-price">${objImg.price} ${objImg.currency} IVA incl</span>
+                                </p>
+                                <a href="#">Comprar</a>
+                            `
+                            : `
+                                <a href="#">- Ver -</a>
+                            `
+                        }
                   </div>
               </div>  
             
