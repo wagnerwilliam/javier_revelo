@@ -2,9 +2,6 @@
  * Componente Web personalizado que representa el encabezado del sitio
  */
 
-const isLocal = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
-
-const BASE_URL = isLocal ? "/" : "/javier_revelo/";
 class Header extends HTMLElement {
 
   constructor() {
@@ -13,12 +10,14 @@ class Header extends HTMLElement {
      * Lista de elementos de navegación que se renderizan en el menú
      * @type {{ name: string, href: string }[]}
      */
+    this.isLocal = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
+    this.BASE_URL = this.isLocal ? "/" : "/javier_revelo/";
     this.navItems = [
-    { name: "Inicio", href: `${BASE_URL}index.html` },
-    { name: "Trabajos", href: `${BASE_URL}plantillas/trabajos.html` },
-    { name: "Tienda", href: `${BASE_URL}plantillas/tienda.html` },
-    { name: "Sobre Mi", href: `${BASE_URL}plantillas/sobre_mi.html` },
-    { name: "Contacto", href: `${BASE_URL}plantillas/contacto.html` }
+    { name: "Inicio", href: `${this.BASE_URL}index.html` },
+    { name: "Trabajos", href: `${this.BASE_URL}plantillas/trabajos.html` },
+    { name: "Tienda", href: `${this.BASE_URL}plantillas/tienda.html` },
+    { name: "Sobre Mi", href: `${this.BASE_URL}plantillas/sobre_mi.html` },
+    { name: "Contacto", href: `${this.BASE_URL}plantillas/contacto.html` }
     ];
   }
 
