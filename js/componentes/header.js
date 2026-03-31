@@ -10,11 +10,11 @@ class Header extends HTMLElement {
      * @type {{ name: string, href: string }[]}
      */
     this.navItems = [
-      { name: "Inicio", href: "/index.html" },
-      { name: "Trabajos", href: "/plantillas/trabajos.html" },
-      { name: "Tienda", href: "/plantillas/tienda.html" },
-      { name: "Sobre Mi", href: "/plantillas/sobre_mi.html" },
-      { name: "Contacto", href: "/plantillas/contacto.html" }
+      { name: "Inicio", href: "index.html" },
+      { name: "Trabajos", href: "plantillas/trabajos.html" },
+      { name: "Tienda", href: "plantillas/tienda.html" },
+      { name: "Sobre Mi", href: "plantillas/sobre_mi.html" },
+      { name: "Contacto", href: "plantillas/contacto.html" }
     ];
   }
 
@@ -34,20 +34,28 @@ class Header extends HTMLElement {
    * @returns {void}
    */
   render(subTitle, theme) {
-    let currentPath = window.location.pathname;
+      const currentPath = window.location.pathname;
+
+    // Detecta si estás dentro de /plantillas
+    const isInTemplates = currentPath.includes("/plantillas/");
+
+    // Ajusta la base de rutas
+    const base = isInTemplates ? "../" : "./";
     this.innerHTML = `
       <header class="header header__${theme}">
           <h1>Javier Revelo</h1>
           ${subTitle ? `<h2>${subTitle}</h2>` : ""}
           <nav class="header__menu">
               <ul>
-                  ${this.navItems.map((item) => `
+                  ${this.navItems.map((item) => {
+                    const href = base + item.href;
+                    return `
                       <li>
-                        <a href="${item.href}" 
+                        <a href="${href}" 
                         class="${currentPath === item.href ? 'active' : ''}"
                         >${item.name}</a>
                       </li>
-                  `).join("")}
+                  `}).join("")}
               </ul>
           </nav>
       </header>
