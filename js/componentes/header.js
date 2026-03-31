@@ -1,7 +1,6 @@
 /**
  * Componente Web personalizado que representa el encabezado del sitio
  */
-const BASE_URL = "/javier_revelo/";
 class Header extends HTMLElement {
 
   constructor() {
@@ -11,11 +10,11 @@ class Header extends HTMLElement {
      * @type {{ name: string, href: string }[]}
      */
     this.navItems = [
-      { name: "Inicio", href: `${BASE_URL}index.html` },
-      { name: "Trabajos", href: `${BASE_URL}plantillas/trabajos.html` },
-      { name: "Tienda", href: `${BASE_URL}plantillas/tienda.html` },
-      { name: "Sobre Mi", href: `${BASE_URL}plantillas/sobre_mi.html` },
-      { name: "Contacto", href: `${BASE_URL}plantillas/contacto.html` }
+      { name: "Inicio", href: "../index.html" },
+      { name: "Trabajos", href: "/plantillas/trabajos.html" },
+      { name: "Tienda", href: "/plantillas/tienda.html" },
+      { name: "Sobre Mi", href: "/plantillas/sobre_mi.html" },
+      { name: "Contacto", href: "/plantillas/contacto.html" }
     ];
   }
 
