@@ -13,6 +13,7 @@
     --light: #FFFFFF;
     --dark: #000000;
     --color-text: #555555;
+    --color-text-light: #777777;
 }
 
 img {
@@ -26,6 +27,6 @@ a {
 }
 
 .section {
-    padding: clamp(1rem, 5vw, 2rem) 1rem;
+    padding: clamp(1rem, 5vw, 3rem) 1rem;
     margin: 0 auto;
 }

@@ -10,8 +10,9 @@ class Header extends HTMLElement {
      * Lista de elementos de navegación que se renderizan en el menú
      * @type {{ name: string, href: string }[]}
      */
-    this.isLocal = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
-    this.BASE_URL = this.isLocal ? "/" : "/javier_revelo/";
+
+    this.BASE_URL = this.getBaseUrl();
+
     this.navItems = [
     { name: "Inicio", href: `${this.BASE_URL}index.html` },
     { name: "Trabajos", href: `${this.BASE_URL}plantillas/trabajos.html` },
@@ -21,6 +22,15 @@ class Header extends HTMLElement {
     ];
   }
 
+  /**
+   * Detecta el entorno y devuelve la base URL correcta
+   */
+  getBaseUrl() {
+    const hostname = window.location.hostname;
+    const isLocal = hostname === "localhost" || hostname === "127.0.0.1";
+
+    return isLocal ? "/" : "/javier_revelo/";
+  }
   /**
    * Método del ciclo de vida que se ejecuta cuando el componente
    * se inserta en el DOM

@@ -19,7 +19,7 @@
 
     animation: heroMove 40s ease-in-out infinite alternate;
 
-    & h1 {
+    & h2 {
         color: white;
         font: 400 3.25rem var(--marcellus-font)
     }

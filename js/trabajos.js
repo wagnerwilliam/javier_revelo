@@ -1,0 +1,33 @@
+/**
+ * Botones del filtro (HTMLButtonElement)
+ * @type {NodeListOf<HTMLButtonElement>}
+ * Elementos de la galería (HTMLElement)
+ * @type {NodeListOf<HTMLElement>}
+ */
+const buttons = document.querySelectorAll(".filters button");
+const items = document.querySelectorAll(".gallery .item");
+
+/**
+ * Recorre cada botón para asignarle funcionalidad.
+ * Relacionado con el filtro de taxonomías (categorías).
+ */
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+
+    const filter = button.dataset.filter;
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    items.forEach(item => {
+      const category = item.dataset.category;
+
+      if (filter === "all" || category === filter) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+
+  });
+});

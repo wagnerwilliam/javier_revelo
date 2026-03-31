@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/trabajos.css">
     <script defer src="../js/componentes/header.js" ></script>
     <script defer src="../js/componentes/heroSection.js" ></script>
+    <script defer src="../js/trabajos.js"></script>
     <title>Trabajos - Javier Revelo</title>
 </head>
 <body>
@@ -19,43 +20,50 @@
         <div class="trabajos__block">
 
             <div class="filters">
-                <button>Todo</button>
-                <button>Escultura</button>
-                <button>Ilustración digital</button>
-                <button>Obra Física</button>
+                <button data-filter="all">Todo</button>
+                <button data-filter="escultura">Escultura</button>
+                <button data-filter="digital">Ilustración digital</button>
+                <button data-filter="fisico">Obra Física</button>
             </div>
 
             <div class="trabajos__cards gallery">
-                <div class="item">
-                    <img src="../assets/images/galeria/el_velo_de_la_memoria.webp" alt="">
+                <div class="item" data-category="digital">
+                    <div class="image-container">
+                        <img src="../assets/images/galeria/el_velo_de_la_memoria.webp" alt="El Velo de la Memoria">
+
+                        <div class="overlay">
+                            <h3>El Velo de la Memoria</h3>
+                            <a href="#">- Ver -</a>
+                        </div>
+                    </div>
                  
                 </div>
 
-                <div class="item">
+                <div class="item" data-category="digital">
                     <img src="../assets/images/galeria/tigrer_cafe.webp" alt="">
                   
                 </div>
 
-                <div class="item">
+                <div class="item" data-category="digital">
                     <img src="../assets/images/galeria/el_umbral_de_la_mente-scaled.webp" alt="">
                   
                 </div>
 
-                <div class="item">
+                <div class="item" data-category="digital">
                     <img src="../assets/images/galeria/sin_nombre.webp" alt="">
                   
                 </div>
 
-                <div class="item">
+                <div class="item" data-category="digital">
                     <img src="../assets/images/galeria/billy_goat.webp" alt="">
                  
                 </div>
 
-                <div class="item">
+                <div class="item" data-category="digital">
                     <img src="../assets/images/galeria/traffic.webp" alt="">
                 </div>
 
-                <div class="item">
+                <div class="item" data-category="escultura">
                     <img src="../assets/images/galeria/post_humanum.webp" alt="">
                 </div>
             </div>
