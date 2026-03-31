@@ -11,10 +11,10 @@ class Header extends HTMLElement {
      */
     this.navItems = [
       { name: "Inicio", href: "../index.html" },
-      { name: "Trabajos", href: "/plantillas/trabajos.html" },
-      { name: "Tienda", href: "/plantillas/tienda.html" },
-      { name: "Sobre Mi", href: "/plantillas/sobre_mi.html" },
-      { name: "Contacto", href: "/plantillas/contacto.html" }
+      { name: "Trabajos", href: "plantillas/trabajos.html" },
+      { name: "Tienda", href: "plantillas/tienda.html" },
+      { name: "Sobre Mi", href: "plantillas/sobre_mi.html" },
+      { name: "Contacto", href: "plantillas/contacto.html" }
     ];
   }
 
