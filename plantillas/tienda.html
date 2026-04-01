@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/trabajos.css">
+    <script defer src="../js/componentes/header.js" ></script>
+    <script type="module" src="../js/componentes/galeriaArtista.js" ></script>
+    <script type="module" src="../js/componentes/heroSection.js" ></script>
+    <script type="module" src="../js/trabajos.js"></script>
+    <title>Tienda - Javier Revelo</title>
+</head>
+<body>
+
+    <section class="section">
+        <my-header theme="dark"></my-header>
+    </section>
+
+    <my-hero title="Tienda"></my-hero>
+
+    <section class="section trabajos">
+        <div class="trabajos__block">
+
+            <div class="filters">
+                <button data-filter="all">Todo</button>
+                <button data-filter="escultura">Escultura</button>
+                <button data-filter="digital">Ilustración digital</button>
+                <button data-filter="fisico">Obra Física</button>
+            </div>
+
+            <my-works view-type="tienda"></my-works>
+
+        </div>
+    </section>
+    
+</body>
+</html>
