@@ -28,7 +28,7 @@ class Trabajos extends HTMLElement {
                                     <span class="old-price">${objImg.oldPrice} ${objImg.currency}</span>
                                     <span class="new-price">${objImg.price} ${objImg.currency} IVA incl</span>
                                 </p>
-                                <a href="#">Comprar</a>
+                                <a href="detalle.html?id=${objImg.id}&type=${viewType}">Comprar</a>
                             `
                             : `
                                 <a href="detalle.html?id=${objImg.id}&type=${viewType}">- Ver -</a>
