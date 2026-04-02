@@ -31,3 +31,23 @@ buttons.forEach(button => {
 
   });
 });
+
+
+const images = document.querySelectorAll(".image-container img");
+
+window.addEventListener("scroll", () => {
+  images.forEach(img => {
+    const rect = img.getBoundingClientRect();
+
+    // posición relativa al viewport
+    const windowHeight = window.innerHeight;
+
+    // porcentaje de visibilidad
+    const progress = (windowHeight - rect.top) / (windowHeight + rect.height);
+
+    // limitamos el movimiento
+    const movement = (progress - 0.5) * 40; // 👈 intensidad
+
+    img.style.transform = `translateY(${movement}px)`;
+  });
+});

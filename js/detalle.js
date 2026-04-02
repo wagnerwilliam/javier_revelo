@@ -6,19 +6,78 @@ class Detalle extends HTMLElement {
     constructor(){
         super()
         this.utils = new Utils()
+        this.TIENDA = "tienda"
     }
 
     connectedCallback() {
-        const params = new URLSearchParams(window.location.search);
-        const data = this.utils.getData(params.get("type"));
-        const item = data.find(obj => obj.id == params.get("id"));        
+        const params = new URLSearchParams(window.location.search)
+        let viewType = params.get("type")
+        console.log(viewType);
+        const data = this.utils.getData(viewType)
+        const item = data.find(obj => obj.id == params.get("id"))      
+        
         document.getElementById("myHero").title = item.name
         document.title = item.name
+        this.render(item, viewType)
 
     }
 
-    render(){
+    render(item, viewType){
+        this.innerHTML = `
+        <section class="section section_detail">
+            <nav class="breadcrumbs">
+                <a href="index.html">Inicio</a>
+                <span>›</span>
+                <a href="trabajos.html">Galería</a>
+                <span>›</span>
+                <span class="current">${item.name}</span>
+            </nav>
 
+            ${viewType === this.TIENDA ? `
+                <div class="section_detail_store__img">
+                    <img id="mainImage" class="mainImage" src="${item.mainImg}" alt="">
+                    <div class="store_thumbs">
+                        ${item.secondImg ? `<img src="${item.secondImg}" class="thumb">`: ""}
+                        ${item.thirdImg ? `<img src="${item.thirdImg}" class="thumb">`: ""}
+                        <img src="${item.mainImg}" class="thumb active">
+                    </div>
+                </div>
+                
+
+                <div class="section_detail_store__content">
+                    <h3>${item.name} | ${item.description}</h3>
+                    <p class="price">
+                        <span class="old-price">${item.oldPrice} ${item.currency}</span>
+                        <span class="new-price dark">${item.price} ${item.currency} IVA incl</span>
+                    </p>
+                    ${item.statement}
+                    <br>    
+                    ${item.year ? `<p><strong>Año:</strong> ${item.year}</p>`: ""}
+                    ${item.description ? `<p><strong>Técnica:</strong> ${item.description}</p>`: ""}
+                    ${item.dimensions ? `<p><strong>Dimensiones:</strong> ${item.dimensions}</p>` : ""}
+
+
+                </div>
+
+            ` : `
+            <div class="section_detail__content">
+                ${item.statement}
+            </div>
+            
+            <div class="section_detail__img">
+                <img id="mainImage" src="${item.mainImg}" alt="">
+            </div>
+            
+            <div class="thumbs">
+                ${item.secondImg ? `<img src="${item.secondImg}" class="thumb">`: ""}
+                ${item.thirdImg ? `<img src="${item.thirdImg}" class="thumb">`: ""}
+                <img src="${item.mainImg}" class="thumb active">
+            </div>
+            
+            `}
+            
+        </section>
+        `
     }
 }
 

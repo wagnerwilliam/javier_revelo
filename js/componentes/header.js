@@ -49,21 +49,23 @@ class Header extends HTMLElement {
   render(subTitle, theme) {
     const currentPath = window.location.pathname;
     this.innerHTML = `
-      <header class="header header__${theme}">
-          <h1>Javier Revelo</h1>
-          ${subTitle ? `<h2>${subTitle}</h2>` : ""}
-          <nav class="header__menu">
-              <ul>
-                  ${this.navItems.map((item) => `
-                      <li>
-                        <a href="${item.href}" 
-                        class="${currentPath === item.href ? 'active' : ''}"
-                        >${item.name}</a>
-                      </li>
-                  `).join("")}
-              </ul>
-          </nav>
-      </header>
+      <section class="section">
+        <header class="header header__${theme}">
+            <h1>Javier Revelo</h1>
+            ${subTitle ? `<h2>${subTitle}</h2>` : ""}
+            <nav class="header__menu">
+                <ul>
+                    ${this.navItems.map((item) => `
+                        <li>
+                          <a href="${item.href}" 
+                          class="${currentPath === item.href ? 'active' : ''}"
+                          >${item.name}</a>
+                        </li>
+                    `).join("")}
+                </ul>
+            </nav>
+        </header>
+      </section>
     `;
   }
 }

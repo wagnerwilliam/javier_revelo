@@ -1,0 +1,131 @@
+@import "trabajos.css";
+
+.section_detail {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 100rem;
+    padding: 4rem;
+    margin-top: 1rem;
+    gap: 2rem;
+    justify-content: center;
+
+}
+
+.section_detail__content {
+    font: 400 1.25rem var(--spectral-font);
+    width: 600px;
+    color: var( --color-text);
+}
+
+.section_detail__img {
+    & img {
+        width: 600px;
+        height: 800px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease;
+        border-radius: 10px;
+        
+    }
+}
+
+
+#mainImage {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#mainImage.fade {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.thumbs {
+    height: 240px;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+
+}
+
+.thumb {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+
+  opacity: 0.5;
+  transition: all 0.3s ease;
+
+  border-radius: 4px;
+}
+
+
+/* Tienda */
+
+.section_detail_store {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 100rem;
+    padding: 4rem;
+    margin-top: 1rem;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.section_detail_store__img {
+    & img.mainImage {
+        width: 600px;
+        height: 800px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease;
+        border-radius: 10px;
+        
+    }
+}
+
+.store_thumbs {
+    height: 240px;
+    flex-flow: row wrap;
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.section_detail_store__content {
+    font: 400 1.25rem var(--spectral-font);
+    width: 600px;
+    color: var(--color-text);
+}
+
+
+.breadcrumbs {
+    flex: 0 0 100%;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+    font: 400 1rem var(--spectral-font);
+
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.breadcrumbs .current {
+    font-weight: 500;
+}
+
+.breadcrumbs span {
+    opacity: 0.5;
+}

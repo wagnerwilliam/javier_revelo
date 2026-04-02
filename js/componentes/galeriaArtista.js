@@ -18,7 +18,7 @@ class Trabajos extends HTMLElement {
         ${data.map((objImg) => `
           <div class="item" data-category="${objImg.category}">
               <div class="image-container">
-                  <img src="${objImg.url}" alt="${objImg.name}">
+                  <img src="${objImg.mainImg}" alt="${objImg.name}">
                   <div class="overlay">
                       <h3>${objImg.name}</h3>
                         ${

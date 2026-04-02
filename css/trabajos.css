@@ -51,8 +51,11 @@
 
 /* Imagen */
 .image-container img {
-  width: 100%;
-  display: block;
+    width: 100%;
+    height: 120%; /* 👈 importante para que haya espacio de movimiento */
+    object-fit: cover;
+    transform: translateY(0);
+    transition: transform 0.5s linear;
 }
 
 /* Overlay oculto inicialmente */
@@ -114,4 +117,8 @@
 .new-price {
   font-weight: bold;
   color: #fff;
+
+    &.dark {
+        color: var(--color-text);
+    }
 }
