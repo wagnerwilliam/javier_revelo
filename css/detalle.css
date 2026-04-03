@@ -84,7 +84,7 @@
 }
 
 .store_thumbs {
-    height: 240px;
+    height: 78px;
     flex-flow: row wrap;
     display: flex;
     gap: 10px;
@@ -128,4 +128,106 @@
 
 .breadcrumbs span {
     opacity: 0.5;
+}
+
+/* analizar estas clases. */
+
+/* quantity */
+.quantity__block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+    & button {
+        font: 400 1rem var(--spectral-font);
+        background-color: var(--boton-color);
+    }
+}
+
+
+.quantity__input {
+  width: 70px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+
+  transition: border 0.3s ease;
+}
+
+.quantity__input:focus {
+  border-color: black;
+}
+
+
+.btn__add {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn__add:hover {
+  background: black;
+  color: white;
+}
+
+
+.cart-fixed {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--main-color);
+  background: white;
+  border-radius: 50%;
+
+  cursor: pointer;
+  z-index: 1000;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+/* icono */
+.cart-fixed i {
+  font-size: 1.5rem;
+}
+
+/* contador */
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+
+  background: red;
+  color: white;
+
+  font-size: 0.7rem;
+  font-weight: bold;
+
+  padding: 4px 6px;
+  border-radius: 50%;
+}
+
+/* hover */
+.cart-fixed:hover {
+  transform: scale(1.1);
 }

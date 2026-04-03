@@ -42,7 +42,6 @@ class Detalle extends HTMLElement {
                         <img src="${item.mainImg}" class="thumb active">
                     </div>
                 </div>
-                
 
                 <div class="section_detail_store__content">
                     <h3>${item.name} | ${item.description}</h3>
@@ -56,7 +55,10 @@ class Detalle extends HTMLElement {
                     ${item.description ? `<p><strong>Técnica:</strong> ${item.description}</p>`: ""}
                     ${item.dimensions ? `<p><strong>Dimensiones:</strong> ${item.dimensions}</p>` : ""}
 
-
+                    <div class="quantity__block">
+                        <input type="number" value="1" min="1" class="quantity__input">
+                        <button class="btn__add">Añadir al carrito</button>
+                    </div>
                 </div>
 
             ` : `
