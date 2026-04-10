@@ -13,12 +13,14 @@
     justify-content: center;
     align-items: center;
     min-height: 40vh;
-
-    background-image: url(../assets/images/hero/hero.webp);
+    background-image: url(../assets/images/hero/hero.jpg);
     background-size: cover;
+    background-position: center;
+
+    animation: heroMove 40s ease-in-out infinite alternate;
 
     & h2 {
         color: white;
-        font: 400 3.25rem var(--marcellus-font);
+        font: 400 3.25rem var(--marcellus-font)
     }
 }

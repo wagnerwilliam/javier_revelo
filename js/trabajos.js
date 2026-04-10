@@ -51,17 +51,3 @@ window.addEventListener("scroll", () => {
     img.style.transform = `translateY(${movement}px)`;
   });
 });
-
-
-
-// reubicar..... esto es del hero
-const hero = document.querySelector(".hero");
-
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-
-  // controla la intensidad (ajusta este valor)
-  const speed = 0.5;
-
-  hero.style.backgroundPosition = `center ${scrollY * speed}px`;
-});
