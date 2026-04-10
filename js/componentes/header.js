@@ -71,3 +71,23 @@ class Header extends HTMLElement {
 }
 
 customElements.define("my-header", Header);
+
+
+// reubicar
+setTimeout(() => {
+  const links = document.querySelectorAll("a");
+
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const url = link.href;
+
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 400);
+    });
+  });
+}, 0);

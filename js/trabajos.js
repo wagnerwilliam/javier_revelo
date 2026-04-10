@@ -46,8 +46,22 @@ window.addEventListener("scroll", () => {
     const progress = (windowHeight - rect.top) / (windowHeight + rect.height);
 
     // limitamos el movimiento
-    const movement = (progress - 0.5) * 40; // 👈 intensidad
+    const movement = (progress - 0.5) * 10; // 👈 intensidad
 
     img.style.transform = `translateY(${movement}px)`;
   });
+});
+
+
+
+// reubicar..... esto es del hero
+const hero = document.querySelector(".hero");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // controla la intensidad (ajusta este valor)
+  const speed = 0.5;
+
+  hero.style.backgroundPosition = `center ${scrollY * speed}px`;
 });
