@@ -5,7 +5,15 @@
 .about_me__main_block {
     display: flex;
     flex-flow: column wrap;
+    align-items: center;
     gap: 2rem;
+    padding-top: 1rem;
+}
+
+.prueba {
+    font: 400 1.2rem var(--spectral-font);
+    color: var(--color-text);
+    text-align: center;
 }
 
 .about_me__block_content{
@@ -25,7 +33,8 @@
 
     & .about_me__content {
         color: var(--color-text);
-        width: 40%;
+        width: 45%;
+        height: 20%;
         font: 400 1.2rem var(--spectral-font);
     }
 }
@@ -45,7 +54,7 @@
     }
 
     & .about_me__exhibitions_one{
-        width: 45%;
+        width: 40%;
         height: 20%;
     }
     
