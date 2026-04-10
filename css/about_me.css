@@ -1,0 +1,56 @@
+@import "hero.css";
+@import "footer.css";
+
+
+.about_me__main_block {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+}
+
+.about_me__block_content{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem;
+
+    & img {
+        width: 45%;
+        height: 20%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease;
+        border-radius: 10px;
+    }
+
+    & .about_me__content {
+        color: var(--color-text);
+        width: 40%;
+        font: 400 1.2rem var(--spectral-font);
+    }
+}
+
+.about_me__block_exhibitions{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem;
+    font: 400 1.2rem var(--spectral-font);
+    color: var(--color-text);
+
+    & h4 {
+        font-size: 1.5rem;
+    }
+
+    & .about_me__exhibitions_one{
+        width: 45%;
+        height: 20%;
+    }
+    
+    & .about_me__exhibitions_two{
+        width: 40%;
+        height: 20%;
+    }
+}
