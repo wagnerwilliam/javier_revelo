@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <script defer src="../js/componentes/header.js" ></script>
+    <script defer src="../js/componentes/heroSection.js" ></script>
+    <script defer src="../js/componentes/footer.js"></script>
+    <title>Contacto - Javier Revelo</title>
+</head>
+<body>
+
+    <my-header theme="dark"></my-header>
+
+    <my-hero title="Contacto"></my-hero>
+
+    
+    <section class="section">
+        <div class="container contact_block">
+            <p>Puedes ponerte en contacto conmigo si te interesa alguna obra de arte original, encargos, consultas o simplemente para saludar.</p>
+            
+            <div class="contact_block__content">
+                <form action="#" method="POST">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name">
+                        </div>
+
+                        <div class="form__group">
+                            <label for="last_name">Apellidos</label>
+                            <input type="text" name="last_name">
+                        </div>
+                    </div>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+
+                    <label for="subject">Asunto</label>
+                    <input type="text" name="subject">
+
+                    <label for="message">Mensaje</label>
+                    <textarea name="message"></textarea>
+
+                    <div class="acceptance">
+                        <input type="checkbox" name="privacy_policy" id="privacy_policy">
+                        <label for="privacy_policy">He leído y acepto la política de privacidad</label>
+                    </div>
+
+                    <input type="submit" value="Enviar">
+
+                </form>
+                <img src="../assets/images/contact.webp" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <my-footer></my-footer>
+    
+</body>
+</html>
