@@ -102,10 +102,10 @@ function getBaseUrl() {
 }
 
 const images = [
-  `${getBaseUrl()}assets/images/inicio/home_1.jpg`,
-  `${getBaseUrl()}assets/images/inicio/home_2.jpg`,
-  `${getBaseUrl()}assets/images/inicio/home_5.jpg`,
-  `${getBaseUrl()}assets/images/inicio/home.jpg`
+  `/javier_revelo/assets/images/inicio/home_1.jpg`,
+  `/javier_revelo/assets/images/inicio/home_2.jpg`,
+  `/javier_revelo/assets/images/inicio/home_5.jpg`,
+  `/javier_revelo/assets/images/inicio/home.jpg`
 ];
 
 let index = 0;
