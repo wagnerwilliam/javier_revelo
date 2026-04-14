@@ -93,11 +93,19 @@ setTimeout(() => {
 }, 0);
 
 
+
+function getBaseUrl() {
+    const hostname = window.location.hostname;
+    const isLocal = hostname === "localhost" || hostname === "127.0.0.1";
+
+    return isLocal ? "/" : "/javier_revelo/";
+}
+
 const images = [
-  "/assets/images/inicio/home_1.jpg",
-  "/assets/images/inicio/home_2.jpg",
-  "/assets/images/inicio/home_5.jpg",
-  "/assets/images/inicio/home.jpg"
+  `${getBaseUrl()}assets/images/inicio/home_1.jpg`,
+  `${getBaseUrl()}assets/images/inicio/home_2.jpg`,
+  `${getBaseUrl()}assets/images/inicio/home_5.jpg`,
+  `${getBaseUrl()}assets/images/inicio/home.jpg`
 ];
 
 let index = 0;
