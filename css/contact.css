@@ -47,7 +47,13 @@ p {
         max-width: 550px;
         height: auto;
         object-fit: cover;
-        border-radius: 10px;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
     }
 }
 
@@ -82,14 +88,16 @@ textarea {
 }
 
 input[type="submit"] {
-    margin-top: 1rem;
+    margin: 1rem auto 0;
+    display: block;
+    width: 150px;
+
     background-color: #D9D9D9;
     font: 400 1.1rem var(--spectral-font);
     color: #000000;
     border: none;
     cursor: pointer;
     letter-spacing: 1px;
-    width: 100%;
 
     &:hover {
         opacity: 0.8;

@@ -91,3 +91,39 @@ setTimeout(() => {
     });
   });
 }, 0);
+
+
+const images = [
+  "/assets/images/inicio/home_1.jpg",
+  "/assets/images/inicio/home_2.jpg",
+  "/assets/images/inicio/home_5.jpg",
+  "/assets/images/inicio/home.jpg"
+];
+
+let index = 0;
+
+const section = document.querySelector(".home__section");
+
+if (!section) {
+  console.error("No se encontró .home__section");
+}
+
+// crear fondo
+const bg = document.createElement("div");
+bg.classList.add("home__bg");
+
+section.appendChild(bg);
+
+// imagen inicial
+bg.style.backgroundImage = `url(${images[index]})`;
+
+setInterval(() => {
+  bg.style.opacity = 0;
+
+  setTimeout(() => {
+    index = (index + 1) % images.length;
+    bg.style.backgroundImage = `url(${images[index]})`;
+    bg.style.opacity = 1;
+  }, 500);
+
+}, 5000);
