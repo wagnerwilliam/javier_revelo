@@ -40,7 +40,7 @@
 
     & li a {
         font-family: var(--spectral-font);
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-transform: uppercase;
 
     }
@@ -88,6 +88,10 @@
 
     .header__menu ul {
         gap: 1.5rem;
+
+        & li a {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -112,8 +116,11 @@
         gap: 1rem;
     }
 
-    .header__menu li a {
-        font-size: 0.9rem;
+    .header__menu ul {
+
+        & li a {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -128,8 +135,11 @@
         font-size: 1.4rem;
     }
 
-    .header__menu li a {
-        font-size: 0.8rem;
+    .header__menu ul {
+
+        & li a {
+            font-size: 1rem;
+        }
     }
 
 }
