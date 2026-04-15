@@ -1,4 +1,4 @@
-@import "header.css";
+@import "home_header.css";
 @keyframes heroMove {
   0% {
     background-position: center top;

@@ -1,3 +1,4 @@
+import "./componentes/homeHeader.js";
 import "./componentes/header.js";
 import "./home.js";
 import "./componentes/heroSection.js";
