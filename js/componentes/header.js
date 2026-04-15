@@ -101,11 +101,11 @@ function getBaseUrl() {
     return isLocal ? "/" : "/javier_revelo/";
 }
 
-const images = [
-  `/javier_revelo/assets/images/inicio/home_1.jpg`,
-  `/javier_revelo/assets/images/inicio/home_2.jpg`,
-  `/javier_revelo/assets/images/inicio/home_5.jpg`,
-  `/javier_revelo/assets/images/inicio/home.jpg`
+const homeImages = [
+  `${getBaseUrl()}assets/images/inicio/home_1.jpg`,
+  `${getBaseUrl()}assets/images/inicio/home_2.jpg`,
+  `${getBaseUrl()}assets/images/inicio/home_5.jpg`,
+  `${getBaseUrl()}assets/images/inicio/home.jpg`
 ];
 
 let index = 0;
@@ -123,14 +123,14 @@ bg.classList.add("home__bg");
 section.appendChild(bg);
 
 // imagen inicial
-bg.style.backgroundImage = `url(${images[index]})`;
+bg.style.backgroundImage = `url(${homeImages[index]})`;
 
 setInterval(() => {
   bg.style.opacity = 0;
 
   setTimeout(() => {
-    index = (index + 1) % images.length;
-    bg.style.backgroundImage = `url(${images[index]})`;
+    index = (index + 1) % homeImages.length;
+    bg.style.backgroundImage = `url(${homeImages[index]})`;
     bg.style.opacity = 1;
   }, 500);
 
