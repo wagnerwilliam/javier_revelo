@@ -121,11 +121,11 @@
 @media (max-width: 480px) {
     .header__light h1,
     .header__dark h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .header__light h2 {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 
     .header__menu li a {
