@@ -69,3 +69,63 @@
 .header__menu a.active::after {
   width: 100%;
 }
+
+
+/* ===== 📱 TABLET ===== */
+@media (max-width: 1024px) {
+    .header {
+        gap: 1rem;
+    }
+
+    .header__light h1,
+    .header__dark h1 {
+        font-size: 3.5rem;
+    }
+
+    .header__light h2 {
+        font-size: 1.5rem;
+    }
+
+    .header__menu ul {
+        gap: 1.5rem;
+    }
+}
+
+/* ===== 📱 MÓVIL ===== */
+@media (max-width: 768px) {
+    .header {
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+
+    .header__light h2 {
+        font-size: 1.3rem;
+    }
+
+    .header__menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header__menu li a {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== 📱 MÓVIL PEQUEÑO ===== */
+@media (max-width: 480px) {
+    .header__light h1,
+    .header__dark h1 {
+        font-size: 2rem;
+    }
+
+    .header__light h2 {
+        font-size: 1rem;
+    }
+
+    .header__menu li a {
+        font-size: 0.8rem;
+    }
+
+}
