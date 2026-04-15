@@ -98,6 +98,10 @@
         padding: 1rem;
     }
 
+    .header__light h1 {
+        font-size: 4.5rem;
+    }
+
     .header__light h2 {
         font-size: 1.3rem;
     }
