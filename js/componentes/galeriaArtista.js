@@ -1,4 +1,20 @@
 import { Utils } from "./utils.js"
+
+/**
+ * @typedef {Object} TrabajoItem
+ * @property {string} id
+ * @property {string} name
+ * @property {string} category
+ * @property {string} mainImg
+ * @property {number} [price]
+ * @property {number} [oldPrice]
+ * @property {string} [currency]
+ */
+
+/**
+ * Componente Web que renderiza una galería de trabajos o productos
+ * @extends HTMLElement
+ */
 class Trabajos extends HTMLElement {
     constructor() {
         super()
@@ -26,7 +42,7 @@ class Trabajos extends HTMLElement {
                             ? `
                                 <p class="price">
                                     <span class="old-price">${objImg.oldPrice} ${objImg.currency}</span>
-                                    <span class="new-price">${objImg.price} ${objImg.currency} IVA incl</span>
+                                    <span class="new-price">${objImg.price} ${objImg.currency} <span class="iva">IVA incl</span></span>
                                 </p>
                                 <a href="detalle.html?id=${objImg.id}&type=${viewType}">Comprar</a>
                             `

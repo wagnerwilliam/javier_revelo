@@ -10,6 +10,8 @@
 }
 
 .section_detail__content {
+    display: flex;
+    flex-flow: row wrap;
     font: 400 1.25rem var(--spectral-font);
     width: 600px;
     color: var( --color-text);
@@ -22,6 +24,10 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         transition: 0.3s ease;
         border-radius: 10px;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
         
     }
 }
@@ -77,6 +83,10 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         transition: 0.3s ease;
         border-radius: 10px;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
         
     }
 }
@@ -128,7 +138,6 @@
     opacity: 0.5;
 }
 
-/* analizar estas clases. */
 
 /* quantity */
 .quantity__block {
@@ -173,35 +182,35 @@
     cursor: pointer;
 
     transition: all 0.3s ease;
-}
 
-.btn__add:hover {
-  background: black;
-  color: white;
+    &:hover {
+        opacity: 0.8;
+        transform: translateY(-2px);
+    }
 }
 
 
 .cart-fixed {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
 
-  width: 60px;
-  height: 60px;
+    width: 60px;
+    height: 60px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  color: var(--main-color);
-  background: white;
-  border-radius: 50%;
+    color: var(--main-color);
+    background: white;
+    border-radius: 50%;
 
-  cursor: pointer;
-  z-index: 1000;
+    cursor: pointer;
+    z-index: 1000;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
 }
 
 /* icono */
@@ -211,21 +220,190 @@
 
 /* contador */
 .cart-count {
-  position: absolute;
-  top: -5px;
-  right: -5px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
 
-  background: red;
-  color: white;
+    background: red;
+    color: white;
 
-  font-size: 0.7rem;
-  font-weight: bold;
+    font-size: 0.7rem;
+    font-weight: bold;
 
-  padding: 4px 6px;
-  border-radius: 50%;
+    padding: 4px 6px;
+    border-radius: 50%;
 }
 
 /* hover */
 .cart-fixed:hover {
   transform: scale(1.1);
+}
+
+
+/* tienda */
+
+.price {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.old-price {
+  text-decoration: line-through;
+  opacity: 0.6;
+  margin-right: 5px;
+}
+
+.new-price {
+  font-weight: bold;
+  color: #fff;
+
+    &.dark {
+        color: var(--color-text);
+    }
+
+    & .iva {
+        font-weight: normal;
+        font-size: 1rem;
+        opacity: .6;
+        margin-left: .3rem;
+    }
+}
+
+
+.decor-bubble {
+    position: fixed;
+    top: 30%;
+    width: 450px; /* 👈 pequeño */
+    
+    opacity: 0.15; /* sutil */
+    pointer-events: none;
+    z-index: -1;
+
+    transition: transform 0.1s linear;
+}
+
+
+.cart-panel {
+    font: 400 1.25rem var(--spectral-font);
+    position: fixed;
+    top: 0;
+    right: -300px; /* oculto */
+    width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+
+    h3 {
+        font: 400 1.25rem var(--spectral-font);
+    }
+}
+
+.cart-panel.active {
+    right: 0; /* aparece */
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+
+.cart-item__remove {
+  position: absolute;
+  top: 25px;
+  right: 6px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  color: #999;
+}
+
+.cart-item__remove:hover {
+  color: red;
+}
+
+.cart-item__image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+/* nombre */
+.cart-item__name {
+    font: 400 1rem var(--spectral-font);
+    margin: 0;
+}
+
+/* cantidad */
+.cart-item__quantity {
+    font-size: 0.8rem;
+    color: #777;
+}
+.cart-item p {
+    font-weight: bold;
+}
+
+
+.cart-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f5f5;
+    border: none;
+    border-radius: 50%;
+
+    font-size: 1rem;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.cart-footer {
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.cart-checkout {
+    font: 400 1rem var(--spectral-font);
+    width: 100%;
+    padding: 12px;
+    background: var(--boton-color);;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+    
+
+        &:hover {
+            transform: translateY(-3px);
+        }
 }

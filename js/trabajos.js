@@ -51,3 +51,12 @@ window.addEventListener("scroll", () => {
     img.style.transform = `translateY(${movement}px)`;
   });
 });
+
+
+const decor = document.querySelector(".decor-bubble");
+
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    decor.style.transform = `translateY(${scrollY * 0.1}px)`;
+});

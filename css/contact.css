@@ -116,3 +116,15 @@ input[type="submit"] {
     display: flex;
     flex-direction: column;
 }
+
+.decor-bubble {
+    position: fixed;
+    top: 30%;
+    width: 450px; /* 👈 pequeño */
+    
+    opacity: 0.15; /* sutil */
+    pointer-events: none;
+    z-index: -1;
+
+    transition: transform 0.1s linear;
+}

@@ -39,7 +39,17 @@
         border-radius: 10px;
     }
 }
+.decor-bubble {
+    position: fixed;
+    top: 30%;
+    width: 450px; /* 👈 pequeño */
+    
+    opacity: 0.15; /* sutil */
+    pointer-events: none;
+    z-index: -1;
 
+    transition: transform 0.1s linear;
+}
 
 .image-container {
   position: relative;
@@ -98,6 +108,7 @@
 }
 
 
+
 /* tienda */
 
 .price {
@@ -117,5 +128,12 @@
 
     &.dark {
         color: var(--color-text);
+    }
+
+    & .iva {
+        font-weight: normal;
+        font-size: 1rem;
+        opacity: .6;
+        margin-left: .3rem;
     }
 }
