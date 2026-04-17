@@ -63,8 +63,6 @@ class Detalle extends HTMLElement {
      */
     initEvents(item) {
         //const removeBtn = this.querySelector(".cart-item__remove")
-        const mainImage = this.querySelector("#mainImage");
-        const thumbs = this.querySelectorAll(".thumb");
         const button = this.querySelector(".btn__add");
         const input = this.querySelector(".quantity__input");
         //const container = this.querySelector(".section_detail_store__img");
@@ -72,28 +70,6 @@ class Detalle extends HTMLElement {
         const cartPanel = this.querySelector(".cart-panel");
         const closeBtn = this.querySelector(".cart-close");
         //const id = container.dataset.id;
-
-        if (!mainImage || !button) return;
-
-        const images = Array.from(thumbs).map(t => t.src);
-
-        let currentIndex = 0;
-
-        thumbs.forEach((thumb, index) => {
-            thumb.addEventListener("click", () => {
-
-                mainImage.classList.add("fade");
-
-                setTimeout(() => {
-                    currentIndex = index;
-                    mainImage.src = images[currentIndex];
-                    mainImage.classList.remove("fade");
-                }, 200);
-
-                thumbs.forEach(t => t.classList.remove("active"));
-                thumb.classList.add("active");
-            });
-        });
 
         /**
          * Añadir producto al carrito
@@ -234,18 +210,6 @@ class Detalle extends HTMLElement {
      */
     render(item, viewType){
         this.innerHTML = `
-        <div class="cart-fixed">
-            <i class="ri-shopping-cart-2-fill"></i>
-            <span class="cart-count">0</span>
-        </div>
-        <div class="cart-panel">
-            <button class="cart-close">x</button>
-            <h3>Carrito</h3>
-            <div class="cart-items"></div>
-            <div class="cart-footer">
-                <button class="cart-checkout">Ir a pagar</button>
-            </div>
-        </div>
         <section class="section section_detail">
             <nav class="breadcrumbs">
                 <a href="index.html">Inicio</a>
@@ -256,6 +220,18 @@ class Detalle extends HTMLElement {
             </nav>
 
             ${viewType === this.TIENDA ? `
+                <div class="cart-fixed">
+                    <i class="ri-shopping-cart-2-fill"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="cart-panel">
+                    <button class="cart-close">x</button>
+                    <h3>Carrito</h3>
+                    <div class="cart-items"></div>
+                    <div class="cart-footer">
+                        <button class="cart-checkout">Ir a pagar</button>
+                    </div>
+                </div>
                 <div class="section_detail_store__img" data-id="${item.id}">
                     <img id="mainImage" class="mainImage" src="${item.mainImg}" alt="">
                     <div class="store_thumbs">
@@ -306,3 +282,33 @@ class Detalle extends HTMLElement {
 }
 
 customElements.define("my-details", Detalle)
+
+
+// Mover esto.
+const mainImage = document.getElementById("mainImage");
+const thumbs = document.querySelectorAll(".thumb");
+
+
+/**analizar este codigo */
+const images = Array.from(thumbs).map(t => t.src);
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateCartCount();
+});
+
+let currentIndex = 0;
+thumbs.forEach((thumb, index) => {
+  thumb.addEventListener("click", () => {
+
+    mainImage.classList.add("fade");
+
+    setTimeout(() => {
+      currentIndex = index;
+      mainImage.src = images[currentIndex];
+      mainImage.classList.remove("fade");
+    }, 200);
+
+    thumbs.forEach(t => t.classList.remove("active"));
+    thumb.classList.add("active");
+  });
+});
