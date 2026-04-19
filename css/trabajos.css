@@ -197,10 +197,10 @@
     .trabajos__block {
         display: flex;
         flex-flow: column nowrap;
-        gap: 2rem;
+        gap: 1rem;
 
         & .filters button {
-            font: 400 .8rem var(--marcellus-font);
+            font: 400 .9rem var(--marcellus-font);
         }
     }
     
