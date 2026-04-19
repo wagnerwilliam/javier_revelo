@@ -153,6 +153,26 @@
         display: flex;
         flex-flow: column nowrap;
         gap: 2rem;
+
+        & .filters {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            & button {
+                font: 400 1rem var(--marcellus-font);
+                color: var(--color-text-light);
+
+                &:hover {
+                    color: var(--color-text)
+                }
+
+                &.active {
+                    color: black;
+                    border: none;
+                }
+            }
+        }
     }
 
     .trabajos__cards {
@@ -167,4 +187,6 @@
             object-fit: cover;
         }
     }
+
+
 }
