@@ -35,6 +35,25 @@
   }
 }
 
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+  .hero {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    background-image: url(../assets/images/hero/hero.webp);
+
+    animation: heroMove 40s ease-in-out infinite alternate;
+
+    & h2 {
+      color: white;
+      font: 400 2.5rem var(--marcellus-font)
+    }
+  }
+}
+
 
 /* 
     RESPONSIVE: Mobile
