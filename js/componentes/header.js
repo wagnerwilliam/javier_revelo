@@ -53,7 +53,7 @@ class Header extends HTMLElement {
         <header class="header header__${theme}">
             <h1>Javier Revelo</h1>
             ${subTitle ? `<h2>${subTitle}</h2>` : ""}
-            <nav class="header__menu_2">
+            <nav class="header__menu_2" id="menuNav">
                 <ul>
                     ${this.navItems.map((item) => `
                         <li>
@@ -64,7 +64,7 @@ class Header extends HTMLElement {
                     `).join("")}
                     </ul>
             </nav>
-            <div class="hamburger_menu"><i class="ri-menu-line"></i></div>
+            <div class="hamburger_menu" id="menu"><i class="ri-menu-line"></i></div>
         </header>
       </section>
     `;
@@ -72,3 +72,12 @@ class Header extends HTMLElement {
 }
 
 customElements.define("my-header", Header);
+
+
+const menu = document.getElementById("menu")
+const menuNav = document.getElementById("menuNav")
+
+
+menu ? menu.addEventListener("click", () => { 
+  menuNav.classList.toggle("active")
+}) : null;
