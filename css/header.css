@@ -94,7 +94,7 @@
     .header__dark {
         display: flex;
         flex-direction: row;
-
+        justify-content: space-between;
         align-items: center;
 
         & h1 {
