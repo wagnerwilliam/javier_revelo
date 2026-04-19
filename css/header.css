@@ -94,7 +94,7 @@
     .header__dark {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+
         align-items: center;
 
         & h1 {
@@ -127,12 +127,19 @@
 
 /* ===== 📱 MÓVIL PEQUEÑO ===== */
 @media (max-width: 480px) {
-    .header__light h1,
-    .header__dark h1 {
-        font-size: 3rem;
+
+    .header__dark {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+
+        & h1 {
+            font-size: 2.8rem;
+        }
     }
 
-    .header__light h2 {
+    .header__dark h2 {
         font-size: 1.4rem;
     }
 

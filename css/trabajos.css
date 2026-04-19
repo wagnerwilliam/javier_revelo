@@ -190,3 +190,18 @@
 
 
 }
+
+/* ===== MÓVIL PEQUEÑO ===== */
+@media (max-width: 480px) {
+
+    .trabajos__block {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 2rem;
+
+        & .filters button {
+            font: 400 .8rem var(--marcellus-font);
+        }
+    }
+    
+}
