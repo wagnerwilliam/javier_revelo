@@ -1,5 +1,11 @@
+<!-- 
+    Página de detalle.
+    Muestra la información completa de una obra o producto específico.
+    Se usa tanto para galería como para tienda (dependiendo del contexto).
+-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
@@ -9,20 +15,28 @@
     <script type="module" src="../js/main.js"></script>
     <title>Document</title>
 </head>
+
 <body>
 
-
+    <!-- Header principal del sitio -->
     <my-header theme="dark"></my-header>
 
+    <!-- Hero con título de la página -->
     <my-hero id="myHero"></my-hero>
 
+    <!-- 
+        Componente principal de detalle.
+        Aquí se renderiza:
+        - imágenes
+        - descripción
+        - precio (si es tienda)
+        - botón de añadir al carrito
+    -->
     <my-details></my-details>
 
-    <img src="../assets/images/galeria/home.webp" class="decor-bubble" alt="">
-
-
+    <!-- Footer reutilizable del sitio -->
     <my-footer></my-footer>
 
-    
 </body>
+
 </html>

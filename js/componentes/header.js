@@ -63,8 +63,8 @@ class Header extends HTMLElement {
                         </li>
                     `).join("")}
                     </ul>
-                    <div class="hamburger_menu"><i class="ri-menu-line"></i></div>
             </nav>
+            <div class="hamburger_menu"><i class="ri-menu-line"></i></div>
         </header>
       </section>
     `;

@@ -1,5 +1,13 @@
+<!-- 
+    Página de Contacto.
+    Permite a los usuarios comunicarse con el artista para:
+    - encargos
+    - compra de obras
+    - consultas generales
+-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +16,28 @@
     <script type="module" src="../js/main.js"></script>
     <title>Contacto - Javier Revelo</title>
 </head>
+
 <body>
 
+    <!-- Header principal del sitio -->
     <my-header theme="dark"></my-header>
 
+    <!-- Hero con título de la página -->
     <my-hero title="Contacto"></my-hero>
 
-    
+    <!-- Sección principal de contacto -->
     <section class="section">
         <div class="container contact_block">
-            <p>Puedes ponerte en contacto conmigo si te interesa alguna obra de arte original, encargos, consultas o simplemente para saludar.</p>
-            
+            <p>
+                Puedes ponerte en contacto conmigo si te interesa alguna obra de arte original, encargos, consultas o
+                simplemente para saludar.
+            </p>
+
             <div class="contact_block__content">
+                <!-- 
+                    Formulario de contacto
+                    Actualmente no está conectado a backend (action="#")
+                -->
                 <form action="#" method="POST">
                     <div class="form__row">
                         <div class="form__group">
@@ -50,14 +68,18 @@
                     <input type="submit" value="Enviar">
 
                 </form>
-                <img src="../assets/images/contact.webp" alt="">
+                <!-- Imagen decorativa de la sección -->
+                <img src="../assets/images/contact.webp" alt="Imagen de contacto">
             </div>
         </div>
     </section>
 
-    <img src="../assets/images/galeria/home.webp" class="decor-bubble" alt="">
+    <!-- Elemento decorativo -->
+    <img src="../assets/images/galeria/home.webp" class="decor-bubble" alt="Elemento decorativo">
 
+    <!-- Footer reutilizable del sitio -->
     <my-footer></my-footer>
-    
+
 </body>
+
 </html>

@@ -1,5 +1,10 @@
+<!-- 
+    Página de Tienda del sitio.
+    Variante de la galería donde las obras se muestran con enfoque comercial.
+-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +13,23 @@
     <script type="module" src="../js/main.js"></script>
     <title>Tienda - Javier Revelo</title>
 </head>
+
 <body>
 
+    <!-- Header reutilizable del sitio -->
     <my-header theme="dark"></my-header>
 
+    <!-- Hero con título de la página -->
     <my-hero title="Tienda"></my-hero>
 
+    <!-- Sección principal de productos -->
     <section class="section trabajos">
         <div class="trabajos__block">
 
+            <!-- 
+                Filtros de categoría
+                data-filter se usa en JS para filtrar las obras dinámicamente
+            -->
             <div class="filters">
                 <button data-filter="all">Todo</button>
                 <button data-filter="escultura">Escultura</button>
@@ -24,14 +37,23 @@
                 <button data-filter="fisico">Obra Física</button>
             </div>
 
+            <!-- 
+                Componente que renderiza las obras/productos.
+                view-type="tienda" indica que debe comportarse como tienda:
+                - mostrar precios
+                - permitir interacción de compra
+            -->
             <my-works view-type="tienda"></my-works>
 
         </div>
     </section>
 
-    <img src="../assets/images/galeria/home.webp" class="decor-bubble" alt="">
+    <!-- Elemento decorativo visual -->
+    <img src="../assets/images/galeria/home.webp" class="decor-bubble" alt="Elemento decorativo">
 
+    <!-- Footer reutilizable del sitio -->
     <my-footer></my-footer>
 
 </body>
+
 </html>

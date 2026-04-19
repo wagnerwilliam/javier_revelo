@@ -1,30 +1,6 @@
 import { Utils } from "./componentes/utils.js"
 
 /**
- * @typedef {Object} CartProduct
- * @property {string} id - ID del producto
- * @property {string} name - Nombre del producto
- * @property {string} image - Imagen del producto
- * @property {number} quantity - Cantidad seleccionada
- */
-
-/**
- * @typedef {Object} ProductItem
- * @property {string} id
- * @property {string} name
- * @property {string} [description]
- * @property {string} mainImg
- * @property {string} [secondImg]
- * @property {string} [thirdImg]
- * @property {number} [oldPrice]
- * @property {number} [price]
- * @property {string} [currency]
- * @property {string} [statement]
- * @property {number} [year]
- * @property {string} [dimensions]
- */
-
-/**
  * Componente Web: Detalle de producto
  * Maneja:
  * - Render del producto
@@ -34,7 +10,7 @@ import { Utils } from "./componentes/utils.js"
  */
 class Detalle extends HTMLElement {
 
-    constructor(){
+    constructor() {
         super()
         this.utils = new Utils()
         this.TIENDA = "tienda"
@@ -94,7 +70,7 @@ class Detalle extends HTMLElement {
         });
 
         //removeBtn.addEventListener("click", this.removeFromCart(id))
-        
+
         /**
          * Abrir/cerrar carrito
          */
@@ -119,11 +95,11 @@ class Detalle extends HTMLElement {
      */
     removeFromCart(id) {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        
+
         cart = cart.filter(item => item.id != id);
-        
+
         localStorage.setItem("cart", JSON.stringify(cart));
-        
+
         this.renderCartItems();
     }
 
@@ -137,14 +113,14 @@ class Detalle extends HTMLElement {
         const existing = cart.find(item => item.id === product.id);
 
         if (existing) {
-          existing.quantity += product.quantity;
+            existing.quantity += product.quantity;
         } else {
-          cart.push(product);
+            cart.push(product);
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
         this.updateCartCount();
-        this.animateCart() 
+        this.animateCart()
     }
 
     /**
@@ -152,13 +128,13 @@ class Detalle extends HTMLElement {
      * @returns {void}
      */
     updateCartCount() {
-      const cart = JSON.parse(localStorage.getItem("cart")) || [];
-      const total = cart.reduce((acc, item) => acc + item.quantity, 0);
-      const counter = document.querySelector(".cart-count");
-      
-      if (counter) {
-        counter.textContent = total;
-      }
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const total = cart.reduce((acc, item) => acc + item.quantity, 0);
+        const counter = document.querySelector(".cart-count");
+
+        if (counter) {
+            counter.textContent = total;
+        }
     }
 
     /**
@@ -166,12 +142,12 @@ class Detalle extends HTMLElement {
      * @returns {void}
      */
     animateCart() {
-      const cart = document.querySelector(".cart-fixed");
-      if (!cart) return;
-      cart.classList.add("bump");
-      setTimeout(() => {
-        cart.classList.remove("bump");
-      }, 200);
+        const cart = document.querySelector(".cart-fixed");
+        if (!cart) return;
+        cart.classList.add("bump");
+        setTimeout(() => {
+            cart.classList.remove("bump");
+        }, 200);
     }
 
     /**
@@ -185,8 +161,8 @@ class Detalle extends HTMLElement {
         if (!container) return;
 
         if (cart.length === 0) {
-        container.innerHTML = "<p>Carrito vacío</p>";
-        return;
+            container.innerHTML = "<p>Carrito vacío</p>";
+            return;
         }
 
         container.innerHTML = cart.map(item => `
@@ -208,7 +184,7 @@ class Detalle extends HTMLElement {
      * @param {string | null} viewType
      * @returns {void}
      */
-    render(item, viewType){
+    render(item, viewType) {
         this.innerHTML = `
         <section class="section section_detail">
             <nav class="breadcrumbs">
@@ -235,8 +211,8 @@ class Detalle extends HTMLElement {
                 <div class="section_detail_store__img" data-id="${item.id}">
                     <img id="mainImage" class="mainImage" src="${item.mainImg}" alt="">
                     <div class="store_thumbs">
-                        ${item.secondImg ? `<img src="${item.secondImg}" class="thumb">`: ""}
-                        ${item.thirdImg ? `<img src="${item.thirdImg}" class="thumb">`: ""}
+                        ${item.secondImg ? `<img src="${item.secondImg}" class="thumb">` : ""}
+                        ${item.thirdImg ? `<img src="${item.thirdImg}" class="thumb">` : ""}
                         <img src="${item.mainImg}" class="thumb active">
                     </div>
                 </div>
@@ -249,8 +225,8 @@ class Detalle extends HTMLElement {
                     </p>
                     ${item.statement}
                     <br>    
-                    ${item.year ? `<p><strong>Año:</strong> ${item.year}</p>`: ""}
-                    ${item.description ? `<p><strong>Técnica:</strong> ${item.description}</p>`: ""}
+                    ${item.year ? `<p><strong>Año:</strong> ${item.year}</p>` : ""}
+                    ${item.description ? `<p><strong>Técnica:</strong> ${item.description}</p>` : ""}
                     ${item.dimensions ? `<p><strong>Dimensiones:</strong> ${item.dimensions}</p>` : ""}
 
                     <div class="quantity__block">
@@ -269,8 +245,8 @@ class Detalle extends HTMLElement {
             </div>
             
             <div class="thumbs">
-                ${item.secondImg ? `<img src="${item.secondImg}" class="thumb">`: ""}
-                ${item.thirdImg ? `<img src="${item.thirdImg}" class="thumb">`: ""}
+                ${item.secondImg ? `<img src="${item.secondImg}" class="thumb">` : ""}
+                ${item.thirdImg ? `<img src="${item.thirdImg}" class="thumb">` : ""}
                 <img src="${item.mainImg}" class="thumb active">
             </div>
             
@@ -283,32 +259,43 @@ class Detalle extends HTMLElement {
 
 customElements.define("my-details", Detalle)
 
-
-// Mover esto.
+/**
+ * Selecciona la Imagen principal.
+ * @type {HTMLImageElement | null}
+ */
 const mainImage = document.getElementById("mainImage");
+
+/** 
+ * Lista de thumbnails (miniaturas)
+ * @type {NodeListOf<HTMLImageElement>}
+ */
 const thumbs = document.querySelectorAll(".thumb");
 
-
-/**analizar este codigo */
+/**
+ * Array con las URLs de todas las imágenes
+ * Se extraen desde los thumbnails
+ * @type {string[]}
+ */
 const images = Array.from(thumbs).map(t => t.src);
 
-document.addEventListener("DOMContentLoaded", () => {
-  updateCartCount();
-});
-
 let currentIndex = 0;
+
+/**
+ * Recorre cada thumbn para asignarle un evento click
+ */
 thumbs.forEach((thumb, index) => {
-  thumb.addEventListener("click", () => {
 
-    mainImage.classList.add("fade");
+    thumb.addEventListener("click", () => {
 
-    setTimeout(() => {
-      currentIndex = index;
-      mainImage.src = images[currentIndex];
-      mainImage.classList.remove("fade");
-    }, 200);
+        mainImage.classList.add("fade");
 
-    thumbs.forEach(t => t.classList.remove("active"));
-    thumb.classList.add("active");
-  });
+        setTimeout(() => {
+            currentIndex = index;
+            mainImage.src = images[currentIndex];
+            mainImage.classList.remove("fade");
+        }, 200);
+
+        thumbs.forEach(t => t.classList.remove("active"));
+        thumb.classList.add("active");
+    });
 });

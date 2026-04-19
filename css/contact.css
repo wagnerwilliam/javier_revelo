@@ -120,9 +120,9 @@ input[type="submit"] {
 .decor-bubble {
     position: fixed;
     top: 30%;
-    width: 450px; /* 👈 pequeño */
+    width: 450px;
     
-    opacity: 0.15; /* sutil */
+    opacity: 0.15;
     pointer-events: none;
     z-index: -1;
 

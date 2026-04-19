@@ -1,26 +1,61 @@
-@import "home_header.css";
+/* 
+    Animación del fondo del hero
+    Mueve la posición del background de arriba hacia abajo
+    creando un efecto sutil de movimiento (parallax ligero)
+*/
 @keyframes heroMove {
   0% {
     background-position: center top;
   }
+
   100% {
     background-position: center bottom;
   }
 }
+
+/* 
+  HERO principal (sección destacada de la página)
+  Usado como portada visual del sitio
+*/
 .hero {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  background-image: url(../assets/images/hero/hero.webp);
+  background-size: cover;
+  background-position: center;
+
+  animation: heroMove 40s ease-in-out infinite alternate;
+
+  & h2 {
+    color: white;
+    font: 400 3.25rem var(--marcellus-font)
+  }
+}
+
+
+/* 
+    RESPONSIVE: Mobile
+    Ajusta el hero para pantallas pequeñas
+*/
+@media (max-width: 768px) {
+  .hero {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    min-height: 40vh;
-    background-image: url(../assets/images/hero/hero.jpg);
-    background-size: cover;
-    background-position: center;
+    min-height: 20vh;
+    background-image: url(../assets/images/hero/hero.webp);
+    background-size: 800px;
+    background-repeat: no-repeat;
 
     animation: heroMove 40s ease-in-out infinite alternate;
 
     & h2 {
-        color: white;
-        font: 400 3.25rem var(--marcellus-font)
+      color: white;
+      font: 400 2.5rem var(--marcellus-font)
     }
+  }
 }

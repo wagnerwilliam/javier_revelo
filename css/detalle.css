@@ -19,7 +19,7 @@
 
 .section_detail__img {
     & img {
-        width: 600px;
+        width: 700px;
         height: 800px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         transition: 0.3s ease;
@@ -78,7 +78,7 @@
 
 .section_detail_store__img {
     & img.mainImage {
-        width: 600px;
+        width: 700px;
         height: 800px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         transition: 0.3s ease;
@@ -273,9 +273,9 @@
 .decor-bubble {
     position: fixed;
     top: 30%;
-    width: 450px; /* 👈 pequeño */
+    width: 450px;
     
-    opacity: 0.15; /* sutil */
+    opacity: 0.15;
     pointer-events: none;
     z-index: -1;
 

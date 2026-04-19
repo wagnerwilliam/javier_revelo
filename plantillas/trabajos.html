@@ -1,5 +1,10 @@
+<!-- 
+    Página de Trabajos / Galería del sitio.
+    Aquí se muestran las obras del artista con filtros por categoría.
+-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +13,23 @@
     <script type="module" src="../js/main.js"></script>
     <title>Trabajos - Javier Revelo</title>
 </head>
+
 <body>
 
+    <!-- Header principal reutilizable del sitio -->
     <my-header theme="dark"></my-header>
 
+    <!-- Hero de la página (título principal) -->
     <my-hero title="Trabajos"></my-hero>
 
+    <!-- Sección principal de galería -->
     <section class="section trabajos">
         <div class="trabajos__block">
 
+            <!-- 
+                Filtros de categoría
+                data-filter se usa en JS para filtrar las obras dinámicamente
+            -->
             <div class="filters">
                 <button data-filter="all">Todo</button>
                 <button data-filter="escultura">Escultura</button>
@@ -24,13 +37,19 @@
                 <button data-filter="fisico">Obra Física</button>
             </div>
 
+            <!-- 
+                Componente personalizado que renderiza las obras.
+            -->
             <my-works></my-works>
 
         </div>
     </section>
 
-    <img src="../assets/images/galeria/home.webp" class="decor-bubble" alt="">
+    <!-- Elemento decorativo visual -->
+    <img src="../assets/images/galeria/home.webp" class="decor-bubble" alt="Elemento decorativo">
 
+    <!-- Footer reutilizable del sitio -->
     <my-footer></my-footer>
 </body>
+
 </html>

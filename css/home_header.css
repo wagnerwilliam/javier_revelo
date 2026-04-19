@@ -22,15 +22,6 @@
     }
 }
 
-.header__dark {
-    color: var(--dark);
-    
-    & h1 {
-        font: 400 5rem var(--spectral-font);
-        line-height: 1.1;
-    }
-
-}
 
 .header__menu ul{
     display: flex;

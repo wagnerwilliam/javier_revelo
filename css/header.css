@@ -1,4 +1,20 @@
-@import "home_header.css";
+.header {
+    display: flex;
+    margin: 0 auto;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header__dark {
+    color: var(--dark);
+    
+    & h1 {
+        font: 400 5rem var(--spectral-font);
+        line-height: 1.1;
+    }
+
+}
 
 
 .header__menu_2 ul{
@@ -74,16 +90,19 @@
 
 /* ===== 📱 MÓVIL ===== */
 @media (max-width: 768px) {
-    .header {
-        gap: 0.8rem;
-        padding: 1rem;
+
+    .header__dark {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        & h1 {
+            font-size: 3.2rem;
+        }
     }
 
-    .header__light h1 {
-        font-size: 4.5rem;
-    }
-
-    .header__light h2 {
+    /* .header__light h2 {
         font-size: 1.3rem;
     }
 
@@ -91,7 +110,7 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-    }
+    } */
 
     .header__menu_2 ul {
         display: none;
@@ -103,9 +122,6 @@
 
     .hamburger_menu {
         display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
     }
 }
 
