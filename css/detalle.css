@@ -448,6 +448,31 @@
         gap: 10px;
         margin-top: 15px;
     }
+
+    /* Tienda */
+    .section_detail_store__img {
+        & img.mainImage {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+            
+        }
+    }
+
+    .section_detail_store__content {
+        font: 400 1rem var(--spectral-font);
+        width: 100%;
+        padding: 0 1rem;                  
+        box-sizing: border-box;
+        color: var(--color-text);
+    }
 }
 
 
@@ -503,15 +528,59 @@
         margin-top: 15px;
     }
 
+
+    /* Tienda */
+
+    .section_detail_store__img {
+        & img.mainImage {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+            
+        }
+    }
+
+    .section_detail_store__content {
+        font: 400 1rem var(--spectral-font);
+        width: 100%;
+        padding: 0 1rem;                  
+        box-sizing: border-box;
+        color: var(--color-text);
+    }
+
 }
 
 /* ===== MÓVIL PEQUEÑO ===== */
 @media (max-width: 480px) {
 
+    .section_detail_store__img {
+        & img.mainImage {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+            
+        }
+    }
+
     .section_detail_store__content {
-        font: 400 1.25rem var(--spectral-font);
-        width: 600px;
-        border: 1px solid red;
+        font: 400 1rem var(--spectral-font);
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
         color: var(--color-text);
     }
 }
