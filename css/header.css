@@ -132,7 +132,7 @@
         z-index: 1;
 
         & li a {
-            font: 400 clamp(1.5rem, 5vw, 2rem) var(--spectral-font);
+            font: 400 clamp(1rem, 5vw, 2rem) var(--spectral-font);
         }
         
 
