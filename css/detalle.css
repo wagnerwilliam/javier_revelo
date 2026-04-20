@@ -407,3 +407,110 @@
             transform: translateY(-3px);
         }
 }
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+
+    .section_detail__content {
+        display: flex;
+        flex-flow: row wrap;  
+        gap: 2rem;
+        font: 400 1.1rem var(--spectral-font);
+        width: 100%;
+        padding: 0 2rem;
+        box-sizing: border-box;
+        color: var(--color-text);
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .section_detail__img {
+        & img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+            
+        }
+    }
+
+    .thumbs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 100px;
+        gap: 10px;
+        margin-top: 15px;
+    }
+}
+
+
+/* ===== MÓVIL ===== */
+@media (max-width: 768px) {
+
+    .section_detail {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        margin-top: 0.5rem;
+        gap: 1rem;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+    .section_detail__content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font: 400 1rem var(--spectral-font);
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        color: var(--color-text);
+    }
+
+    .section_detail__img {
+        & img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+            
+        }
+    }
+
+    .thumbs {
+        height: 100px;
+        flex-direction: row;
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+}
+
+/* ===== MÓVIL PEQUEÑO ===== */
+@media (max-width: 480px) {
+
+    .section_detail_store__content {
+        font: 400 1.25rem var(--spectral-font);
+        width: 600px;
+        border: 1px solid red;
+        color: var(--color-text);
+    }
+}

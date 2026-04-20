@@ -74,7 +74,8 @@
 
     & h2 {
       color: white;
-      font: 400 2.5rem var(--marcellus-font)
+      font: 400 2.5rem var(--marcellus-font);
+      text-align: center;
     }
   }
 }

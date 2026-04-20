@@ -32,3 +32,42 @@
         }
     }
 }
+
+
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+
+}
+
+
+/* ===== MÓVIL ===== */
+@media (max-width: 768px) {
+
+    .section__footer {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer__block {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer_content {
+        padding: .5rem .5rem;
+        text-align: center;
+        font: 400 1.25rem var(--spectral-font);
+        color: var(--color-text);
+    }
+
+
+}
+
+
+/* ===== MÓVIL PEQUEÑO ===== */
+@media (max-width: 480px) {
+
+}
