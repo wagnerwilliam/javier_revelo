@@ -6,12 +6,10 @@
     padding-top: 1rem;
 }
 
-.prueba {
-    font: 400 1.2rem var(--spectral-font);
-    color: var(--color-text);
-    text-align: center;
-}
 
+/* =========================
+   BLOQUE PRINCIPAL (IMAGEN + TEXTO)
+   ========================= */
 .about_me__block_content{
     display: flex;
     flex-flow: row wrap;
@@ -42,6 +40,9 @@
     }
 }
 
+/* =========================
+   BLOQUE EXPOSICIONES (DOS COLUMNAS EN DESKTOP)
+   ========================= */
 .about_me__block_exhibitions{
     width: 100%;
     display: flex;
@@ -67,6 +68,9 @@
     }
 }
 
+/* =========================
+   ELEMENTO DECORATIVO FLOTANTE
+   ========================= */
 .decor-bubble {
     position: fixed;
     top: 30%;
@@ -77,4 +81,145 @@
     z-index: -1;
 
     transition: transform 0.1s linear;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+
+    .about_me__main_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .about_me__block_content {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 2rem;
+        padding: 1.5rem;
+        align-items: center;
+        padding: 1rem;
+
+        & img {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
+
+        & .about_me__content {
+            width: 100%;
+            color: var(--color-text);
+            height: auto;
+            font: 400 1.1rem/1.6 var(--spectral-font);
+        }
+    }
+
+    .about_me__block_exhibitions {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem;
+        font: 400 1.05rem var(--spectral-font);
+        color: var(--color-text);
+
+        & h4 {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        & .about_me__exhibitions_one {
+            width: 100%;   
+        }
+
+        & .about_me__exhibitions_two{
+            width: 100%;
+        }
+        
+    }
+}
+
+/* ===== MÓVIL ===== */
+@media (max-width: 768px) {
+
+    .about_me__main_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .about_me__block_content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        align-items: center;
+        padding: 1rem;
+
+        & img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
+
+        & .about_me__content {
+            color: var(--color-text);
+            width: 100%;
+            height: auto;
+            font: 400 1rem var(--spectral-font);
+        }
+    }
+
+    .about_me__block_exhibitions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+        padding: 1rem;
+        font: 400 1rem var(--spectral-font);
+        color: var(--color-text);
+
+        & h4 {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        & .about_me__exhibitions_one {
+            width: 100%;   
+        }
+
+        & .about_me__exhibitions_two{
+            width: 100%;
+        }
+        
+    }
+
+}
+
+/* ===== MÓVIL PEQUEÑO ===== */
+@media (max-width: 480px) {
+
+
 }
