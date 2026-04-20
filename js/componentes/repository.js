@@ -447,6 +447,8 @@ export class StoreRepository extends ImageRepository {
                 id: 9,
                 name: "Tránsito de lo Invisible",
                 mainImg: this.buildUrl("transito_de_lo_invisible.webp"),
+                secondImg: this.buildUrl("transito_de_lo_invisible_3.webp"),
+                thirdImg: this.buildUrl("transito_de_lo_invisible_2.webp"),
                 description: "Escultura en arcilla",
                 category: "escultura",
                 price: 115,

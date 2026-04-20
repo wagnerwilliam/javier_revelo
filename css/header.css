@@ -57,14 +57,14 @@
 
 
 .hamburger_menu {
-    display: none; /* oculto en desktop */
+    display: none;
     font-size: 2rem;
     cursor: pointer;
     z-index: 1000;
 }
 
 
-/* ===== 📱 TABLET ===== */
+/* ===== TABLET ===== */
 @media (max-width: 1024px) {
     .header {
         gap: 1rem;
@@ -72,7 +72,7 @@
 
     .header__light h1,
     .header__dark h1 {
-        font-size: 3.5rem;
+        font-size: 3.3rem;
     }
 
     .header__light h2 {
@@ -88,7 +88,7 @@
     }
 }
 
-/* ===== 📱 MÓVIL ===== */
+/* ===== MÓVIL ===== */
 @media (max-width: 768px) {
 
     .header__dark {
@@ -98,19 +98,9 @@
         align-items: center;
 
         & h1 {
-            font-size: 3.2rem;
+            font-size: 3rem;
         }
     }
-
-    /* .header__light h2 {
-        font-size: 1.3rem;
-    }
-
-    .header__menu_2 ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    } */
 
     .header__menu_2 ul {
         display: none;
@@ -143,7 +133,7 @@
     }
 }
 
-/* ===== 📱 MÓVIL PEQUEÑO ===== */
+/* ===== MÓVIL PEQUEÑO ===== */
 @media (max-width: 480px) {
 
     .header__dark {
@@ -153,7 +143,7 @@
         align-items: center;
 
         & h1 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
         }
     }
 
