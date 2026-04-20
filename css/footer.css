@@ -45,15 +45,15 @@
 @media (max-width: 768px) {
 
     .section__footer {
-        padding-top: 4rem;
-        padding-bottom: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     .footer__block {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        gap: 1rem;
+        gap: .1rem;
     }
 
     .footer_content {
@@ -62,7 +62,6 @@
         font: 400 1.25rem var(--spectral-font);
         color: var(--color-text);
     }
-
 
 }
 
