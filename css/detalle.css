@@ -469,6 +469,7 @@
     .section_detail__content {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 1rem;
         font: 400 1rem var(--spectral-font);
         width: 100%;
