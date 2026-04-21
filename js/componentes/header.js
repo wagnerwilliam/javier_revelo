@@ -55,6 +55,7 @@ class Header extends HTMLElement {
             ${subTitle ? `<h2>${subTitle}</h2>` : ""}
             <nav class="header__nav" id="menuNav">
                 <ul>
+                    <img src="../assets/images/galeria/hand.webp" class="decor-bubble" alt="Elemento decorativo">
                     ${this.navItems.map((item) => `
                         <li>
                           <a href="${item.href}" 
@@ -80,4 +81,6 @@ const menuNav = document.getElementById("menuNav")
 
 menu ? menu.addEventListener("click", () => { 
   menuNav.classList.toggle("active")
+  document.body.classList.toggle("menu-open");
+
 }) : null;

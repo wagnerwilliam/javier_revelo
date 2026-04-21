@@ -53,7 +53,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-const decor = document.querySelector(".decor-bubble");
+const decor = document.querySelector("._bubble");
 
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;

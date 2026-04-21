@@ -64,6 +64,10 @@
     z-index: 1000;
 }
 
+.decor-bubble {
+    display: none;
+}
+
 
 /* ===== TABLET ===== */
 @media (max-width: 1024px) {
@@ -125,7 +129,19 @@
         & li a {
             font: 400 clamp(1rem, 5vw, 2rem) var(--spectral-font);
         }
-        
+
+        .decor-bubble {
+            display: block;
+            position: fixed;
+            top: 30%;
+            width: 450px;
+
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: -1;
+
+            transition: transform 0.1s linear;
+        }
 
     }
 

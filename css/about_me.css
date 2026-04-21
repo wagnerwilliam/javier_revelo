@@ -65,7 +65,7 @@
 }
 
 /* ELEMENTO DECORATIVO FLOTANTE */
-.decor-bubble {
+.decor_bubble {
     position: fixed;
     top: 30%;
     width: 450px;

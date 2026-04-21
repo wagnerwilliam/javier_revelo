@@ -184,9 +184,7 @@ class Detalle extends HTMLElement {
      * @param {string | null} viewType
      * @returns {void}
      */
-    render(item, viewType) {
-        console.log(item);
-        
+    render(item, viewType) {        
         this.innerHTML = `
         <section class="section section_detail">
             <nav class="breadcrumbs">

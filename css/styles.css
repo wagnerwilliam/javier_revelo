@@ -45,6 +45,11 @@ a {
 body {
   opacity: 1;
   transition: opacity 1.2s ease;
+
+    &.menu-open {
+        overflow: hidden;
+        height: 100vh;
+    }
 }
 
 body.fade-out {
