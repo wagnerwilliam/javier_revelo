@@ -1,3 +1,4 @@
+/* BLOQUE PRINCIPAL DE TRABAJOS */
 .trabajos__block {
     display: flex;
     flex-flow: column wrap;
@@ -29,6 +30,7 @@
     }
 }
 
+/* GRID DE TARJETAS (TRABAJOS) */
 .trabajos__cards {
     display: grid;
     grid-template-columns: repeat(3, 400px);
@@ -41,30 +43,35 @@
     }
 }
 
+/* ELEMENTO DECORATIVO */
 .decor-bubble {
     position: fixed;
     top: 30%;
     width: 450px;
-
     opacity: 0.15;
     pointer-events: none;
     z-index: -1;
-
     transition: transform 0.1s linear;
 }
 
+/* Imagen */
 .image-container {
     position: relative;
     overflow: hidden;
-}
 
-/* Imagen */
-.image-container img {
-    width: 100%;
-    height: 120%;
-    object-fit: cover;
-    transform: translateY(0);
-    transition: transform 0.5s linear;
+    & img {
+        width: 100%;
+        height: 120%;
+        object-fit: cover;
+        transform: translateY(0);
+        transition: transform 0.5s linear;
+    }
+
+    &:hover {
+        & .overlay {
+            opacity: 1;
+        }
+    }
 }
 
 /* Overlay oculto inicialmente */
@@ -91,28 +98,21 @@
     & h3 {
         text-align: center;
     }
+
+    /* Estilo del botón/enlace */
+    & a {
+        margin-top: 10px;
+        color: white;
+        text-decoration: none;
+        border: 1px solid white;
+        padding: 6px 12px;
+        transition: 0.3s;
+        list-style: none;
+        border: none;
+    }
 }
-
-.image-container:hover .overlay {
-    opacity: 1;
-}
-
-/* Estilo del botón/enlace */
-.overlay a {
-    margin-top: 10px;
-    color: white;
-    text-decoration: none;
-    border: 1px solid white;
-    padding: 6px 12px;
-    transition: 0.3s;
-    list-style: none;
-    border: none;
-}
-
-
 
 /* tienda */
-
 .price {
     margin: 10px 0;
     font-size: 1.2rem;
@@ -141,7 +141,7 @@
 }
 
 
-/* ===== TABLET ===== */
+/* TABLET */
 @media (max-width: 1024px) {
 
     .trabajos__block {
@@ -190,7 +190,7 @@
 }
 
 
-/* ===== MÓVIL ===== */
+/* MÓVIL */
 @media (max-width: 768px) {
 
     .trabajos__block {
@@ -235,7 +235,7 @@
 
 }
 
-/* ===== MÓVIL PEQUEÑO ===== */
+/* MÓVIL PEQUEÑO */
 @media (max-width: 480px) {
 
     .trabajos__block {

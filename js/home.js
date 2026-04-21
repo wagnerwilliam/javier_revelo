@@ -18,12 +18,16 @@ setTimeout(() => {
 
 
 function getBaseUrl() {
-    const hostname = window.location.hostname;
-    const isLocal = hostname === "localhost" || hostname === "127.0.0.1";
+  const hostname = window.location.hostname;
+  const isLocal = hostname === "localhost" || hostname === "127.0.0.1";
 
-    return isLocal ? "/" : "/javier_revelo/";
+  // ruta base según entorno
+  return isLocal ? "/" : "/javier_revelo/";
 }
 
+/**
+ * Array de imágenes que rotan como fondo
+ */
 const homeImages = [
   `${getBaseUrl()}assets/images/inicio/home_1.jpg`,
   `${getBaseUrl()}assets/images/inicio/home_2.jpg`,
@@ -33,21 +37,27 @@ const homeImages = [
 
 let index = 0;
 
+
+
+/* CONTENEDOR PRINCIPAL DEL HOME */
 const section = document.querySelector(".home__section");
 
 if (!section) {
   console.error("No se encontró .home__section");
 }
 
-// crear fondo
+/* CREACIÓN DINÁMICA DEL FONDO */
+/* Crea un div que actuará como fondo dinámico */
 const bg = document.createElement("div");
+
 bg.classList.add("home__bg");
 
 section.appendChild(bg);
 
-// imagen inicial
+/* establece imagen inicial del fondo */
 bg.style.backgroundImage = `url(${homeImages[index]})`;
 
+/* CAMBIO AUTOMÁTICO DE IMÁGENES */
 setInterval(() => {
   bg.style.opacity = 0;
 

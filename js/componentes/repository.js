@@ -413,6 +413,7 @@ export class StoreRepository extends ImageRepository {
                 id: 7,
                 name: "Suspensión",
                 mainImg: this.buildUrl("suspension.webp"),
+                secondImg: this.buildUrl("suspension_2.webp"),
                 description: "Óleo sobre lienzo",
                 category: "fisico",
                 price: 150,

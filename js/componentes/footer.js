@@ -1,3 +1,7 @@
+/**
+ * Componente personalizado Footer
+ * @extends {HTMLElement}
+ */
 class Footer extends HTMLElement {
 
     connectedCallback() {

@@ -1,17 +1,6 @@
 import { Utils } from "./utils.js"
 
 /**
- * @typedef {Object} TrabajoItem
- * @property {string} id
- * @property {string} name
- * @property {string} category
- * @property {string} mainImg
- * @property {number} [price]
- * @property {number} [oldPrice]
- * @property {string} [currency]
- */
-
-/**
  * Componente Web que renderiza una galería de trabajos o productos
  * @extends HTMLElement
  */

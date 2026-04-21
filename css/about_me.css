@@ -7,10 +7,8 @@
 }
 
 
-/* =========================
-   BLOQUE PRINCIPAL (IMAGEN + TEXTO)
-   ========================= */
-.about_me__block_content{
+/* BLOQUE PRINCIPAL (IMAGEN + TEXTO) */
+.about_me__block_content {
     display: flex;
     flex-flow: row wrap;
     width: 90%;
@@ -40,10 +38,8 @@
     }
 }
 
-/* =========================
-   BLOQUE EXPOSICIONES (DOS COLUMNAS EN DESKTOP)
-   ========================= */
-.about_me__block_exhibitions{
+/* BLOQUE EXPOSICIONES (DOS COLUMNAS EN DESKTOP) */
+.about_me__block_exhibitions {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -57,25 +53,23 @@
         font-size: 1.5rem;
     }
 
-    & .about_me__exhibitions_one{
+    & .about_me__exhibitions_one {
         width: 40%;
         height: 20%;
     }
-    
-    & .about_me__exhibitions_two{
+
+    & .about_me__exhibitions_two {
         width: 40%;
         height: 20%;
     }
 }
 
-/* =========================
-   ELEMENTO DECORATIVO FLOTANTE
-   ========================= */
+/* ELEMENTO DECORATIVO FLOTANTE */
 .decor-bubble {
     position: fixed;
     top: 30%;
     width: 450px;
-    
+
     opacity: 0.15;
     pointer-events: none;
     z-index: -1;
@@ -140,13 +134,13 @@
         }
 
         & .about_me__exhibitions_one {
-            width: 100%;   
-        }
-
-        & .about_me__exhibitions_two{
             width: 100%;
         }
-        
+
+        & .about_me__exhibitions_two {
+            width: 100%;
+        }
+
     }
 }
 
@@ -207,19 +201,16 @@
         }
 
         & .about_me__exhibitions_one {
-            width: 100%;   
-        }
-
-        & .about_me__exhibitions_two{
             width: 100%;
         }
-        
+
+        & .about_me__exhibitions_two {
+            width: 100%;
+        }
+
     }
 
 }
 
 /* ===== MÓVIL PEQUEÑO ===== */
-@media (max-width: 480px) {
-
-
-}
+@media (max-width: 480px) {}

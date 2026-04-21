@@ -53,7 +53,7 @@ class Header extends HTMLElement {
         <header class="header header__${theme}">
             <h1>Javier Revelo</h1>
             ${subTitle ? `<h2>${subTitle}</h2>` : ""}
-            <nav class="header__menu_2" id="menuNav">
+            <nav class="header__nav" id="menuNav">
                 <ul>
                     ${this.navItems.map((item) => `
                         <li>

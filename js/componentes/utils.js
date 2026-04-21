@@ -1,6 +1,11 @@
 import { TrabajosRepository } from "./repository.js"
 import { StoreRepository } from "./repository.js"
 
+
+/**
+ * Clase para manejar configuración global
+ * y acceso a datos según el tipo de vista (trabajos o tienda).
+ */
 export class Utils {
 
     constructor() {

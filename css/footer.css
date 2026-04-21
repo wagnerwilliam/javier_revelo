@@ -1,11 +1,12 @@
 @import "styles.css";
 
+/* SECCIÓN FOOTER */
 .section__footer {
     padding-top: 4rem;
     padding-bottom: 2rem;
 }
 
-
+/* CONTENEDOR PRINCIPAL DEL FOOTER */
 .footer__block {
     display: flex;
     flex-flow: column wrap;
@@ -13,12 +14,14 @@
     gap: 1rem;
 }
 
+/* TEXTO DEL FOOTER */
 .footer_content {
     font: 400 1.25rem var(--spectral-font);
     color: var(--color-text);
 }
 
-.footer__icons{
+/* ICONOS DEL FOOTER (REDES SOCIALES, ETC) */
+.footer__icons {
     display: flex;
     flex-flow: row wrap;
     gap: 1rem;
@@ -33,15 +36,7 @@
     }
 }
 
-
-
-/* ===== TABLET ===== */
-@media (max-width: 1024px) {
-
-}
-
-
-/* ===== MÓVIL ===== */
+/* MÓVIL */
 @media (max-width: 768px) {
 
     .section__footer {
@@ -62,11 +57,5 @@
         font: 400 1.1rem var(--spectral-font);
         color: var(--color-text);
     }
-
-}
-
-
-/* ===== MÓVIL PEQUEÑO ===== */
-@media (max-width: 480px) {
 
 }

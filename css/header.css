@@ -1,3 +1,4 @@
+/* HEADER GENERAL */
 .header {
     display: flex;
     margin: 0 auto;
@@ -6,6 +7,7 @@
     gap: 1.5rem;
 }
 
+/* VARIANTE DARK DEL HEADER */
 .header__dark {
     color: var(--dark);
     
@@ -16,46 +18,45 @@
 
 }
 
+/* NAVEGACIÓN PRINCIPAL */
+.header__nav {
 
-.header__menu_2 ul{
-    display: flex;
-    flex-flow: row wrap;
-    gap: 2rem;
-    list-style: none;
+    & ul{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 2rem;
+        list-style: none;
+    }
 
-    & li a {
+    & a {
         font-family: var(--spectral-font);
         font-size: 1rem;
         text-transform: uppercase;
+        position: relative;
+        display: inline-block;
 
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 1px;
+            background: currentColor;
+            transition: width 0.4s ease;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+
+        &.active::after {
+            width: 100%;
+        }
     }
 }
 
-.header__menu_2 a {
-  position: relative;
-  display: inline-block;
-}
-
-.header__menu_2 a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 1px;
-  background: currentColor;
-  transition: width 0.4s ease;
-}
-
-.header__menu_2 a:hover::after {
-  width: 100%;
-}
-
-.header__menu_2 a.active::after {
-  width: 100%;
-}
-
-
+/* BOTÓN HAMBURGUESA */
 .hamburger_menu {
     display: none;
     font-size: 2rem;
@@ -79,7 +80,7 @@
         font-size: 1.5rem;
     }
 
-    .header__menu_2 ul {
+    .header__nav ul {
         gap: 1.5rem;
 
         & li a {
@@ -88,7 +89,7 @@
     }
 }
 
-/* ===== MÓVIL ===== */
+/* MÓVIL */
 @media (max-width: 768px) {
 
     .header__dark {
@@ -102,12 +103,12 @@
         }
     }
 
-    .header__menu_2 ul {
+    .header__nav ul {
         display: none;
     } 
 
 
-    .header__menu_2.active ul {
+    .header__nav.active ul {
         display: flex;
         position: fixed;
         top: 0;
@@ -133,7 +134,7 @@
     }
 }
 
-/* ===== MÓVIL PEQUEÑO ===== */
+/* MÓVIL PEQUEÑO */
 @media (max-width: 480px) {
 
     .header__dark {
@@ -151,7 +152,7 @@
         font-size: 1.4rem;
     }
 
-    .header__menu_2 ul {
+    .header__nav ul {
 
         & li a {
             font-size: 1rem;

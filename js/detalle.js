@@ -5,7 +5,7 @@ import { Utils } from "./componentes/utils.js"
  * Maneja:
  * - Render del producto
  * - Galería de imágenes
- * - Carrito en localStorage
+ * - Carrito en sessionStorage
  * - UI interactiva
  */
 class Detalle extends HTMLElement {
@@ -94,11 +94,11 @@ class Detalle extends HTMLElement {
      * @returns {void}
      */
     removeFromCart(id) {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
 
         cart = cart.filter(item => item.id != id);
 
-        localStorage.setItem("cart", JSON.stringify(cart));
+        sessionStorage.setItem("cart", JSON.stringify(cart));
 
         this.renderCartItems();
     }
@@ -109,7 +109,7 @@ class Detalle extends HTMLElement {
      * @returns {void}
      */
     addToCart(product) {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
         const existing = cart.find(item => item.id === product.id);
 
         if (existing) {
@@ -118,7 +118,7 @@ class Detalle extends HTMLElement {
             cart.push(product);
         }
 
-        localStorage.setItem("cart", JSON.stringify(cart));
+        sessionStorage.setItem("cart", JSON.stringify(cart));
         this.updateCartCount();
         this.animateCart()
     }
@@ -128,7 +128,7 @@ class Detalle extends HTMLElement {
      * @returns {void}
      */
     updateCartCount() {
-        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
         const total = cart.reduce((acc, item) => acc + item.quantity, 0);
         const counter = document.querySelector(".cart-count");
 
@@ -155,7 +155,7 @@ class Detalle extends HTMLElement {
      * @returns {void}
      */
     renderCartItems() {
-        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
         const container = document.querySelector(".cart-items");
 
         if (!container) return;
@@ -185,6 +185,8 @@ class Detalle extends HTMLElement {
      * @returns {void}
      */
     render(item, viewType) {
+        console.log(item);
+        
         this.innerHTML = `
         <section class="section section_detail">
             <nav class="breadcrumbs">
