@@ -14,9 +14,9 @@ class Footer extends HTMLElement {
                     </div>
         
                     <ul class="footer__icons">
-                        <li><a href="#"><i class="ri-facebook-circle-fill"></i></a></li>
-                        <li><a href="#"><i class="ri-mail-fill"></i></a></li>
-                        <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+                        <li><a><i class="ri-facebook-circle-fill"></i></a></li>
+                        <li><a><i class="ri-mail-fill"></i></a></li>
+                        <li><a><i class="ri-instagram-line"></i></a></li>
                     </ul>
                 </div>
             </footer>

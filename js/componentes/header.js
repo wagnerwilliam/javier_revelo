@@ -51,7 +51,7 @@ class Header extends HTMLElement {
     this.innerHTML = `
       <section class="section home__section">
         <header class="header header__${theme}">
-            <h1>Javier Revelo</h1>
+            <h1 class="header__title">Javier Revelo</h1>
             ${subTitle ? `<h2>${subTitle}</h2>` : ""}
             <nav class="header__nav" id="menuNav">
                 <ul>
